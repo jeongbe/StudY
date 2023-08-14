@@ -7,6 +7,19 @@ body, html {
     height: 100%;
 }
 
+button, input, select, textarea {
+    border-radius: 0;
+    border: none;
+    background: 0 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-text-size-adjust: none;
+}
+
 h1{
     display: block;
 }
@@ -83,5 +96,37 @@ a{
 }
 
 .form-section{
-    padding: o 20px;
+    padding: 0 20px;
+}
+
+.form-list{
+    position: relative;
+    
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.form-item:first-of-type{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.form-item{
+    display: flex;
+    /* align-items: center; */
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-height: 50px;
+    padding: 0 10px 0 45px;
+}
+
+.form-item.user::before{
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -96px -296px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    content: '';
 }
