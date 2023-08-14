@@ -1,0 +1,16 @@
+h1{
+    color: chocolate;
+}
+
+h2{
+    text-align: center;
+    justify-content: center;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+li{
+    font-feature-settings: "abvm";
+}
