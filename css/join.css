@@ -2,9 +2,23 @@ body {
     background-color: #fff;
 }
 
+body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+
 body, html {
     width: 100%;
     height: 100%;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+address, em {
+    font-style: normal;
 }
 
 button, input, select, textarea {
@@ -33,8 +47,9 @@ div{
     justify-content: center;
     align-items: center;
     height: 100%;
-    font-size: 0;
+    /* font-size: 0; */
 }
+
 
 .inner{
     width: 500px;
@@ -46,6 +61,11 @@ div{
 .logo{
     flex: none;
     padding: 25px 115px 25px 20px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .logo .link{
@@ -91,9 +111,9 @@ a{
 }
 
 .form-content{
-    align-items: center;
-    float: 1 1 auto;
+    flex: 1 1 auto;
 }
+
 
 .form-section{
     padding: 0 20px;
@@ -106,6 +126,18 @@ a{
     border-radius: 6px;
 }
 
+.form-list::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid #c6c6c6;
+    pointer-events: none;
+    content: '';
+}
+
 .form-item:first-of-type{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -113,12 +145,12 @@ a{
 
 .form-item{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     position: relative;
     box-sizing: border-box;
     max-width: 100%;
     min-height: 50px;
-    padding: 0 10px 0 45px;
+    padding: 0 5px 0 10px;
 }
 
 .form-item.user::before{
@@ -129,4 +161,365 @@ a{
     width: 30px;
     height: 30px;
     content: '';
+}
+
+/* .form-item.user.error::before {
+    background-position: -160px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+} */
+
+.input {
+    
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    /* width: 100%; */
+    font-size: 16px;
+    line-height: 22px;
+    color: #222;
+}
+
+.form-item .id_naver {
+    flex: none;
+    padding: 0 4px 0 6px;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -.2px;
+    color: #767678;
+}
+
+.form-item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid #dfdfdf;
+    pointer-events: none;
+    content: '';
+}
+
+.form-item+.form-item {
+    margin-top: -1px;
+}
+
+.form-item.lock::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -64px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    content: '';
+}
+
+.password-info {
+    flex: none;
+    padding: 0 5px;
+}
+
+.btn-show {
+    margin-left: 4px;
+    vertical-align: middle;
+    
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn-show.hide::before {
+    display: inline-flex;
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -32px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    content: '';
+}
+
+.form-item.email::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -310px -160px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    content: '';
+}
+
+.form-list {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.form-item.Birthday::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: 0 -296px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    content: '';
+}
+
+.form-item.telecom::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -64px -296px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    content: '';
+}
+
+.btn-telecom{
+    position: relative;
+    width: 100%;
+    padding-right: 30px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -.8px;
+    color: #222;
+    text-align: left;
+}
+
+.btn-telecom .check-tele {
+    font-size: 15px;
+    color: #929294;
+}
+
+.btn-telecom[aria-expanded=true]::after {
+    transform: rotate(180deg);
+}
+.btn-telecom::after {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -117px -244px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 17px;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    content: '';
+}
+
+.btn-telecom[aria-expanded=true]+.telecom-menu {
+    display: block;
+}
+
+.telecom-menu {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 42px;
+    left: 40px;
+    z-index: 100;
+    width: 200px;
+    border-radius: 6px;
+    border: 1px solid #c6c6c6;
+    box-shadow: 1px 1px 10px rgba(18,28,70,.08);
+    background: #fff;
+}
+
+.form-item.gender {
+    padding: 0 10px 0 1px;
+}
+
+.adult-list {  
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 9px;
+}
+
+.adult-list .radio-item {
+    width: 100px;
+}
+
+.radio-item:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.radio-item:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+.radio-item+.radio-item {
+    margin-left: -6.5px;
+}
+
+.radio-item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.radio-item label {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 0;
+    border-radius: inherit;
+    border: 1px solid #c6c6c6;
+    font-size: 13px;
+    line-height: 18px;
+    color: #929294;
+    text-align: center;
+}
+
+label {
+    cursor: pointer;
+}
+
+.form-item.phone {
+    padding-right: 94px;
+}
+
+.form-item.phone::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -216px -96px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    content: '';
+}
+
+.form-item.check-box {
+    display: block;
+    padding: 0;
+}
+
+.form-item:last-of-type {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.form-item:first-of-type {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.form-item.check-box .title-area {
+    position: relative;
+    padding: 14px 45px 14px 14px;
+}
+
+.check-circle label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    vertical-align: middle;
+}
+
+.check-circle label::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -181px -296px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    content: '';
+}
+
+.check-circle .option {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -.6px;
+    color: #929294;
+    vertical-align: middle;
+}
+
+.check-circle .option+.text {
+    font-weight: 600;
+}
+
+.check-circle .text {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -.8px;
+    color: #222;
+    vertical-align: middle;
+}
+
+.form-item.check-box .btn-check {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.form-item.check-box .btn-check::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -117px -244px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: top;
+    content: '';
+}
+
+.join-toggle {
+    margin-top: 14px;
+    text-align: right;
+}
+
+.join-toggle label {
+    display: inline-block;
+    position: relative;
+    /* padding-right: 53px; */
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -.8px;
+    color: #929294;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.join-toggle input:checked+label::after {
+    display: inline-flex;
+    position: relative;
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -252px -174px;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 20px;
+    top: 5px;
+    content: '';
+}
+
+.submit-btn-box {
+    /* flex: none; */
+    margin-top: 30%;
+    padding: 20px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.05);
+    background: #09aa5c;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
 }
