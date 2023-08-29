@@ -1,57 +1,208 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>계산기</title>
-        <link rel="stylesheet" href="/Calculator/css/calculator.css" />
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="numberText">
-                    <div class="num"></div>
-                    <div class="answer"></div>
-                </div>
-                <hr />
-                <table class="numtable" border="1">
-                    <tr>
-                        <td>
-                            <button class="remove">C</button>
-                        </td>
-                        <td>()</td>
-                        <td>%</td>
-                        <td>÷</td>
-                    </tr>
-                    <tr>
-                        <td id="num_7" class="num_7">
-                            <button id="num_7">7</button>
-                        </td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>×</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>+</td>
-                    </tr>
-                    <tr>
-                        <td>+/-</td>
-                        <td>0</td>
-                        <td>.</td>
-                        <td>=</td>
-                    </tr>
-                </table>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+    <link rel="stylesheet" href="/Calculator/css/calculator.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="numberText">
+                <div class="num"></div>
+                <div class="answer"></div>
             </div>
+            <hr />
+            <table class="numtable" border="1">
+                <tr>
+                    <td>
+                        <button class="remove">C</button>
+                    </td>
+                    <td>()</td>
+                    <td>%</td>
+                    <td>÷</td>
+                </tr>
+                <tr>
+                    <td id="num_7" class="num_7">7</td>
+                    <td id="num_8">8</td>
+                    <td id="num_9">9</td>
+                    <td>×</td>
+                </tr>
+                <tr>
+                    <td id="num_4">4</td>
+                    <td id="num_5">5</td>
+                    <td id="num_6">6</td>
+                    <td class="Minus">-</td>
+                </tr>
+                <tr>
+                    <td id="num_1">1</td>
+                    <td id="num_2">2</td>
+                    <td id="num_3">3</td>
+                    <td class="Plus">+</td>
+                </tr>
+                <tr>
+                    <td>+/-</td>
+                    <td>0</td>
+                    <td>.</td>
+                    <td class="Epual">=</td>
+                </tr>
+            </table>
         </div>
-        <script src="/Calculator/calculator.js"></script>
-    </body>
+    </div>
+    <script>
+        const numText = document.querySelector('.num');  //숫자,연산 들어가는 곳
+        const answerText = document.querySelector('.answer');//결과 값
+
+
+        const num1 = document.getElementById('num_1');   //숫자1버튼
+        const num2 = document.getElementById('num_2');   //숫자2버튼
+        const num3 = document.getElementById('num_3');   //숫자3버튼
+        const num4 = document.getElementById('num_4');   //숫자4버튼
+        const num5 = document.getElementById('num_5');   //숫자5버튼
+        const num6 = document.getElementById('num_6');   //숫자6버튼
+        const num7 = document.getElementById('num_7');   //숫자7버튼
+        const num8 = document.getElementById('num_8'); //숫자 8버튼
+        const num9 = document.getElementById('num_9'); //숫자 9버튼
+
+        const PluseBtn = document.querySelector(".Plus");  //+기호 버튼
+        const MinusBtn = document.querySelector(".Minus"); //- 기호 버튼
+        const EpualBtn = document.querySelector(".Epual"); //=기호 버튼 (누르면 결과값 생성)
+        const remove = document.querySelector('.remove');   //삭제 버튼
+
+        var anNum, anNum2, anNum3, anNum4, anNum5;
+        var answer = 0;
+        var num = 0;
+
+
+
+        remove.addEventListener('click', DeletNum);
+
+        num1.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num1.innerText;
+            console.log(num);
+            num = "";
+        })
+
+        num2.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num2.innerText;
+            console.log(num);
+            num = "";
+        })
+
+        num3.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num3.innerText;
+            console.log(num);
+            num = "";
+        })
+
+        num4.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num4.innerText;
+            console.log(num);
+            num = "";
+        })
+
+        num5.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num5.innerText;
+            console.log(num);
+            num = "";
+        })
+
+        num6.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num6.innerText;
+            console.log(num);
+            num = "";
+        })
+
+        num7.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num7.innerText;
+            // console.log(+answer + 2);
+            console.log(num);
+            num = "";
+        });
+
+        num8.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num8.innerText;
+            console.log(num);
+            num = "";
+        })
+
+        num9.addEventListener('click', (event) => {
+            num = answerText.innerHTML += num9.innerText;
+            console.log(num);
+            num = "";
+        })
+
+
+
+
+        PluseBtn.addEventListener('click', (event) => {
+            numText.innerText += answerText.innerText += PluseBtn.innerText;
+            answerText.innerText = num;
+
+            var at = numText.innerText;
+
+            console.log("numText : " + numText.innerText);
+        });
+
+        MinusBtn.addEventListener('click', (e) => {
+            numText.innerText += answerText.innerText += MinusBtn.innerText;
+            answerText.innerText = num;
+
+            var at = numText.innerText;
+
+            console.log("numText : " + numText.innerText);
+        })
+
+        EpualBtn.addEventListener('click', (event) => {
+            numText.innerText += answerText.innerText += EpualBtn.innerText;
+
+            NoEpual();
+            plus();
+            // minus();
+
+            // switch (operator) {
+            //     case : "+"
+            // }
+
+        });
+
+        //= 없애주는 메소드
+        function NoEpual() {
+            anNum = numText.innerText;
+            anNum2 = anNum.split('=');
+            console.log("anNum2" + anNum2);
+            anNum3 = anNum2;
+        }
+
+
+        //더하기 할때
+        function plus() {
+            anNum4 = anNum3[0].split('+');
+            anNum5 = anNum4.map(Number);
+            answerText.innerText = (anNum5[0] + anNum5[1]);
+        }
+
+        //빼기 할때
+        function minus() {
+            anNum4 = anNum3[0].split('-');
+            anNum5 = anNum4.map(Number);
+            answerText.innerText = (anNum5[0] - anNum5[1]);
+        }
+
+
+
+        function DeletNum(_num) {
+            // NumLine = NumLine.slice(0, -1);
+            answerText.innerText = "0";
+            numText.innerText = "";
+            // console.log(NumLine);
+        }
+
+
+    </script>
+</body>
+
 </html>
