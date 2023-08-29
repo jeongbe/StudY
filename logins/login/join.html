@@ -13,26 +13,27 @@
         <div class="inner">
 
             <h1 class="logo">
-                <a href="" class="link">
-                    <span>네이버</span>
-                </a>
+                <a href="" class="link"></a>
             </h1>
             <div class="content">
                 <form action="" class="form">
                     <div class="form-content">
                         <div class="form-section">
                             <div class="form-list">
-                                <div class="form-item user">
+                                <div class="form-item user error">
                                     <input type="text" placeholder="아이디" class="input" maxlength="20"
                                         autocapitalize="off">
                                     <div class="id_naver">@naver.com</div>
                                 </div>
-                                <div class="form-item password">
+                                <div class="form-item lock password">
                                     <input type="password" name="" id="" placeholder="비밀번호" class="input" maxlength="20"
                                         autocomplete="new-password">
+                                    <div class="password-info">
+                                        <button type="button" class="btn-show hide"></button>
+                                    </div>
                                 </div>
                                 <div class="form-item email">
-                                    <span class="form-span">[선택]</span>
+                                    <span class="form-span blind">[선택]</span>
                                     <input type="email" name="" id="" class="input" placeholder="[선택] 비밀번호 분실 시 확인용 이메일"
                                         maxlength="100">
                                 </div>
@@ -95,7 +96,7 @@
                                     </ul>
                                 </div>
                                 <div class="form-item gender">
-                                    <ul class="gender-list">
+                                    <ul class="adult-list">
                                         <li class="radio-item">
                                             <input type="radio" name="" id="gender1" class="blind">
                                             <label for="gender1">남자</label>
@@ -112,21 +113,21 @@
                                         </li>
                                         <li class="radio-item">
                                             <input type="radio" name="" id="foreigner2" class="blind">
-                                            <label for="foreigner2">여자</label>
+                                            <label for="foreigner2">외국인</label>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="form-item">
+                                <div class="form-item phone">
                                     <input type="tel" name="" id="" placeholder="휴대전화번호" class="input" maxlength="16">
                                 </div>
                             </div>
                             <div class="form-list">
                                 <div class="form-item check-box">
                                     <div class="title-area">
-                                        <div class="ckeck-circle">
+                                        <div class="check-circle">
                                             <input type="checkbox" name="" id="agree" class="blind">
                                             <label for="agree">
-                                                <p>[필수]</p>
+                                                <em class="option">[필수]</em>
                                                 <span class="text">인증 약관 전체동의</span>
                                             </label>
                                         </div>
@@ -137,12 +138,12 @@
                                 </div>
                             </div>
                             <div class="join-toggle">
-                                <input type="checkbox" name="" id="join_toggle" checked>
-                                <label for="join_toggle">실명인증된 아이디로 가입</label>
+                                <input type="checkbox" name="" id="join-toggle" checked>
+                                <label for="join-toggle" >실명인증된 아이디로 가입              </label>
                             </div>
                         </div>
                     </div>
-                    <div class="submit-btn=box">
+                    <div class="submit-btn-box">
                         <button type="submit" class="btn-submit">인증요청</button>
                     </div>
                 </form>
