@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/join.css">
+    <link rel="stylesheet" href="/logins/css/join.css">
 </head>
 
 <body>
@@ -21,13 +21,13 @@
                         <div class="form-section">
                             <div class="form-list">
                                 <div class="form-item user error">
-                                    <input type="text" placeholder="아이디" class="input" maxlength="20"
-                                        autocapitalize="off">
+                                    <input type="text" placeholder="아이디" class="input" id="IdInput" maxlength="20"
+                                        autocapitalize="off" onfocusout="IDE()">
                                     <div class="id_naver">@naver.com</div>
                                 </div>
                                 <div class="form-item lock password">
-                                    <input type="password" name="" id="" placeholder="비밀번호" class="input" maxlength="20"
-                                        autocomplete="new-password">
+                                    <input type="password" name="" id="PassInput" placeholder="비밀번호" class="input"
+                                        maxlength="20" autocomplete="new-password" onfocusout="PE()">
                                     <div class="password-info">
                                         <button type="button" class="btn-show hide"></button>
                                     </div>
@@ -40,15 +40,15 @@
                             </div>
 
                             <!-- 로그인 경고문 -->
-                            <!-- <div class="error_text IdError">
-                            아이디: 필수 정보입니다.
-                        </div>
-                        <div class="error_text pawError">
-                            비밀번호: 필수 정보입니다.
-                        </div>
-                        <div class="error_text EmailError">
+                            <div class="error_text item_style IDError" style="display: none;">
+                                아이디: 필수 정보입니다.
+                            </div>
+                            <div class="error_text item_style PassError " style="display: none;">
+                                비밀번호: 필수 정보입니다.
+                            </div>
+                            <div class="error_text EmailError">
 
-                        </div> -->
+                            </div>
                             <div class="form-list">
                                 <div class="form-item user">
                                     <input type="text" name="" id="" placeholder="이름" class="input" maxlength="40">
@@ -139,7 +139,7 @@
                             </div>
                             <div class="join-toggle">
                                 <input type="checkbox" name="" id="join-toggle" checked>
-                                <label for="join-toggle" >실명인증된 아이디로 가입              </label>
+                                <label for="join-toggle">실명인증된 아이디로 가입 </label>
                             </div>
                         </div>
                     </div>
@@ -150,6 +150,9 @@
             </div>
         </div>
     </div>
+    <script src="/logins/js/join.js">
+
+    </script>
 </body>
 
 </html>

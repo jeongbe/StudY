@@ -426,9 +426,19 @@ label{
     width: 500px;
     padding: 14px 0;
     border-radius: 6px;
+    background-color: #1e7b09;
     border: 1px solid rgba(0, 0, 0, .05);
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
     color: #fff;
+}
+
+.check-desc2 label::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-position: -190px -265px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
 }
