@@ -547,3 +547,8 @@ button {
     background: #ff3f3f;
     content: '';
 }
+
+.red-placeholder::placeholder {
+    color: red;
+    text-decoration: underline;
+    }
