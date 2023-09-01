@@ -171,85 +171,10 @@
             </div>
         </div>
     </div>
-    <script>
-        const check1 = document.querySelector(".check-wap");
-        const check2 = document.querySelector(".check-wap2");
-        const item1 = document.querySelector(".item1");
-        const item2 = document.querySelector(".item2");
-        const btn = document.querySelector(".btn-submit");
+    <!-- ... 이전 HTML 코드 ... -->
 
-        var x = false;
-        var y = false;
+    <script src="/logins/js/join-agree.js"></script>
 
-        // Notclickitem1();
-
-        item1.addEventListener('click', () => {
-            x = !x;
-            updateCheck1Content();
-
-            c_Check();
-        })
-
-
-        item2.addEventListener('click', () => {
-            y = !y;
-            console.log(y);
-            updateCheck1Content2();
-            c_Check();
-        });
-
-        function updateCheck1Content() {
-            if (x) {
-                onclickitem1();
-            } else {
-                Notclickitem1();
-            }
-        }
-
-        function updateCheck1Content2() {
-            if (y) {
-                onclickitem2();
-            } else {
-                Notclickitem2();
-            }
-        }
-
-
-
-
-        function onclickitem1() {
-            check1.classList.add('check-desc2');
-            item1.classList.add('item1-clicked');
-        }
-
-        function Notclickitem1() {
-            check1.classList.remove('check-desc2');
-            item1.classList.remove('item1-clicked');
-        }
-
-        function onclickitem2() {
-            check2.classList.add('check-desc2');
-            item2.classList.add('item2-clicked');
-        }
-
-        function Notclickitem2() {
-            check2.classList.remove('check-desc2');
-            item2.classList.remove('item2-clicked');
-        }
-
-        function c_Check() {
-            if (x == true && y == true) {
-                btn.disabled = false;
-            } else {
-                btn.disabled = true;
-            }
-        }
-        btn.onclick = () => {
-            location.href = ("/logins/login/join.html");
-        }
-
-
-    </script>
 </body>
 
 </html>
