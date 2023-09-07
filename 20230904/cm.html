@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let gender = parseInt(prompt("여자면 1, 남자면 2를 입력해주세요"));
+        let cm = parseInt(prompt("본인 신장을 입력해주세요"));
+        let cm2 = (cm * 0.01);
+        console.log(cm2);
+        let kg = parseInt(prompt("본인의 체중을 입력해주세요")); 
+
+        // let GBMI = 0;
+        let BMI;
+
+        if(gender === 1){
+            BMI = (cm2 * cm2) * 21;  //여자
+            console.log(BMI);
+            BMI = kg / BMI * 100;
+            console.log("여자");
+            console.log(BMI);
+        }else if(gender === 2){
+            BMI = (cm2 * cm2) * 22;  //남자
+            console.log(BMI);
+            BMI = kg / BMI * 100;
+            console.log("남자");
+            console.log(BMI);
+        }
+
+
+        if(BMI < 90 ){
+            alert("저체중입니다.");
+        }else if((90 <= BMI) && (BMI < 110)){
+            alert("정상체중입니다.")
+        }else if((110 <= BMI) && (BMI < 120)){
+            alert("과체중입니다.")
+        }else if((120 <= BMI) && (BMI < 130)){
+            alert("경도 비만");
+        }else if((130 <= BMI) && (BMI < 160)){
+            alert("중정도 비만");
+        }else{
+            alert("고도 비만");
+        }
+    </script>
+</body>
+</html>

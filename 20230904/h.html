@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cm = parseInt(prompt("본인 신장을 입력해주세요"));
+        let kg = parseInt(prompt("본인의 체중을 입력해주세요"));
+        let cm2 = (cm * 0.01);
+        let BMI = kg / (cm2 * cm2);
+
+        if(BMI < 18.5){
+            alert("저체중입니다.");
+        }else if(18.5 <= BMI < 23){
+            alert("정상체중입니다.")
+        }else if(23 <= BMI < 25){
+            alert("과체중입니다.")
+        }else if(25 <= BMI < 30){
+            alert("경도 비만 입니다.")
+        }else if(30 <= BMI < 35){
+            alert("중정도 비만 입니다.")
+        }else if( BMI >= 35){
+            alert("고도 비만 입니다.")
+        }
+
+    </script>
+</body>
+</html>

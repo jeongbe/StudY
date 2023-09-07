@@ -153,23 +153,6 @@ a{
     padding: 0 5px 0 10px;
 }
 
-.form-item.user::before{
-    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
-    background-size: 340px 326px;
-    background-position: -96px -296px;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    content: '';
-}
-
-/* .form-item.user.error::before {
-    background-position: -160px -264px;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-} */
-
 .input {
     
     flex: 1 1 auto;
@@ -203,16 +186,6 @@ a{
 
 .form-item+.form-item {
     margin-top: -1px;
-}
-
-.form-item.lock::before {
-    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
-    background-size: 340px 326px;
-    background-position: -64px -264px;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    content: '';
 }
 
 .password-info {
@@ -552,3 +525,4 @@ button {
     color: red;
     text-decoration: underline;
     }
+
