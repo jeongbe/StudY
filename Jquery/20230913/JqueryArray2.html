@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <title>Document</title>
+    <script>
+        $(function (){
+            var arr1 = ["서울", "대전", "부산", "전주"];
+            var arr2 = ["한국", "미국", "일본", "중국"];
+
+            var obj = {
+                "name" : "정부장",
+                "area" : "서울"
+            }
+
+            var idxNum = $.inArray("부산",arr1);  //"부산"이 있는 인덱스 값 반환
+            console.log(idxNum);
+
+            var okArray1 = $.isArray(arr1);
+            console.log(okArray1);
+            var okArray2 = $.isArray(obj);
+            console.log(okArray2);
+
+            $.merge(arr2,arr1);  //arr2기준으로 뒤에 arr1이 붙는다.
+            console.log(arr2);
+
+            //index() 메서드
+            var idxNum2 = $("li").index($("#list3"));
+            console.log(idxNum2);
+        })
+    </script>
+</head>
+<body>
+    <h1>배열관련 함수</h1>
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li id="list3">내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>

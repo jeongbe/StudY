@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script>
+        $(function(){
+
+            var style_1 = {
+                "background-color":"#0ff",
+                "border":"2px solid #f00"
+            }
+            
+            var style_2 = {
+                "background-color":"#ff0",
+                "border":"2px dashed #f00"
+            }
+
+            $(".text1").closest("div")
+                .css({
+                    "border":"2px dashed #00f"
+            })
+
+            // $(".text2").parents("div").css({
+            //     "border":"2px solid yellow"
+            // })
+
+
+
+            // $(".text").prevAll().css(style_1);   //이전에 오는 형제 요소 선택
+
+            // $(".text + p").css(style_2);  //바로 다음에 오는 p태그 선택
+
+            // $(".text").nextAll().css(style_2);
+
+            // $(".text").siblings().css(style_2);
+
+            $(".text3").prevUntil().css(style_1);
+            $(".text3").nextUntil().css(style_1);
+        })
+    </script>
+</head>
+<body>
+        <h1 class="title">선택자</h1>
+        <section>
+            <div>
+                <p class="text1">내용</p>
+            </div>
+        </section>
+        
+
+</body>
+</html>

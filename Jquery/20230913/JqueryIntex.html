@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#menu li:first").css({"background-color":"#ff0"});   //첫번째 자식 요소
+
+            $("#menu li:last").css({"background-color":"#0ff"});    //마지막 자식 요소
+
+            $("#menu2 li:even").css({"background-color":"red"});    //짝수
+
+            $("#menu2 li:odd").css({"background-color":"blue"});      //홀수
+
+            $("#menu3 li:eq(2)").css({"background-color":"blue"});      //요소 선택 2번째 선택
+
+            $("#menu3 li:lt(2)").css({"background-color":"red"});       //요서 2번째 기준으로 그전 요소들 선택
+
+            $("#menu3 li:gt(2)").css({"background-color":"#0ff"});      //요소 2번재 기준으로 그 다음 요소들 선택
+
+            $("#menu4 li:first-of-type").css({"background-color":"#0ff"});    //li 첫번째 요소
+
+            $("#menu4 li:last-of-type").css({"background-color":"yellow"});     //li 마지막 요소
+
+            $("#menu5 li:nth-child(5)").css({"background-color":"yellow"});    //li 두번째 요소
+
+            $("#menu5 li:nth-child(2n)").css({"background-color":"green"});     //지정한 배수 요소들
+
+            $("#menu6 li:nth-last-child(1)").css({"background-color":"red"});    //뒤에서 부터 거꾸로
+
+            $("#menu7 li").slice(1,3).css({"background-color":"red"});  //index 기준으로 1에서2까지
+
+            $("#menu8 li:only-child").css({"background-color":"green"});
+        })
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+
+    <ul id="menu2">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+
+    <ul id="menu3">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+    </ul>
+
+    <ul id="menu4">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+    </ul>
+
+    <ul id="menu5">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+    </ul>
+    <ul id="menu6">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+    </ul>
+
+    <ul id="menu7">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <ul id="menu8">
+        <li>내용1</li>
+    </ul>
+</body>
+</html>
