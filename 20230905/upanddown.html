@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = parseInt(prompt("1에서 100까지 숫자를 적으시오"));
+        var answer = Math.ceil(Math.random() * 100);  //1에서 100까지 랜덤
+        // alert(answer);
+        var count = 0;
+        console.log(answer);
+
+        while(num !== answer){
+            if(num < answer){
+                alert("num값이 정답 값보다 작습니다.");
+                count++;
+            }else if(num > answer){
+                alert("num값이 정답 값보다 큽니다.");
+                count++;
+            }else{
+                break;
+            }
+            
+            
+            
+            num = parseInt(prompt("다시 1에서부터 100까지의 숫자를 입력하시오"));
+        }
+        alert("정답입니다." + count + "번 만에 맞췄습니다.");
+
+    </script>
+</body>
+</html>

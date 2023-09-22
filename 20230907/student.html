@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td, th{
+            border: solid 1px black;
+            padding: 10px 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="body">
+    <button class="btn">학생 추가</button>
+    <!-- <table>
+        <tr>
+            <th>순서</th>
+            <th>이름</th>
+            <th>학번</th>
+            <th>과목</th>
+            <th>점수</th>
+            <th>학점</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>박수진</td>
+            <td>20190304</td>
+            <td>국어</td>
+            <td>100</td>
+            <td>A</td>
+        </tr>
+    </table> -->
+    <script>
+            let subject, name,studentNum, score = "";
+
+            function promptI(){
+                subject = prompt("과목을 입력하세요");
+                name = prompt("이름을 입력하세요");
+                studentNum = prompt("학번을 입력하세요");
+                score = prompt("점수를 입력하세요");
+            }
+
+            // promptI();
+            let Btn = document.querySelector(".btn");
+            Btn.onclick = () => {
+                promptI();
+
+                
+                    let row2 = document.createElement('tr');
+            
+                    let studentcount = document.createElement('td');
+                    studentcount.innerHTML = count;
+                    let name_ = document.createElement('td');
+                    name_.innerHTML = name;
+                    let num_ = document.createElement('td');
+                    num_.innerHTML = studentNum;
+                    let subject_ = document.createElement('td');
+                    subject_.innerHTML = subject;
+                    let score_ = document.createElement('td');
+                    score_.innerHTML = score;
+                    let credit_ = document.createElement('td');
+                    score_credit();
+                    credit_.innerHTML = credit;
+
+                    row2.appendChild(studentcount); 
+                    row2.appendChild(name_);
+                    row2.appendChild(num_);
+                    row2.appendChild(subject_);
+                    row2.appendChild(score_);
+                    row2.appendChild(credit_);
+                    tbody.appendChild(row2);
+                    count++;
+                
+            }
+
+            
+
+            let table = document.createElement('table');
+            let thead = document.createElement('thead');
+            let tbody = document.createElement('tbody');
+            let count = 1;
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+
+            document.getElementById('body').appendChild(table);
+
+            let row = document.createElement('tr');
+            let h = document.createElement('td');
+            h.innerHTML = "순서";
+            let h2 = document.createElement('td');
+            h2.innerHTML = "이름";
+            let h3 = document.createElement('td');
+            h3.innerHTML = "학번";
+            let h4 = document.createElement('td');
+            h4.innerHTML = "과목";
+            let h5 = document.createElement('td');
+            h5.innerHTML = "점수";
+            let h6 = document.createElement('td');
+            h6.innerHTML = "학점";
+
+
+            row.appendChild(h);
+            row.appendChild(h2);
+            row.appendChild(h3);
+            row.appendChild(h4);
+            row.appendChild(h5);
+            row.appendChild(h6);
+            thead.appendChild(row);
+            //여기까지 고정 부분
+
+            
+            
+
+
+            
+
+            function score_credit(){
+                if(score >= 90 && score <= 100){
+                    credit = "A";
+                }else if(score >= 80){
+                    credit = "B";
+                }else if(score >= 70){
+                    credit = "C";
+                }else if(score >= 55){
+                    credit = "D";
+                }else{
+                    credit = "F";
+                }
+            }
+    </script>
+</body>
+</html>
