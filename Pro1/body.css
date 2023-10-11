@@ -1,0 +1,125 @@
+ul li {
+    list-style-type: none;
+    text-decoration: none; /* 링크의 밑줄 제거 */
+}
+
+a,
+a:active,
+a:focus,
+a:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: inherit; /* 링크의 색상 제거 */
+}
+
+.carousel-inner {
+    margin: auto;
+    display: block;
+    width: 1600px;
+    height: 400px;
+}
+
+.carousel-control-prev {
+    width: 30%;
+}
+
+.carousel-control-next {
+    right: 10%;
+}
+
+.category {
+    margin-top: 30px;
+    justify-content: center; /* 항목을 수평 가운데 정렬합니다. */
+    align-items: center; /* 항목을 수직 가운데 정렬합니다. */
+    position: relative;
+    font-weight: 400;
+    font-size: 0;
+    display: flex;
+    padding: 0;
+    /* border-bottom-width: 1200px;
+    border-bottom: 2px solid rgb(177, 169, 169); */
+    
+}
+
+.line {
+    align-items: center;
+    justify-content: center;
+    width: 1400px;
+    border-bottom: 2px solid #000000;
+    margin: 10px auto;
+}
+
+.category .item {
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    /* cursor: pointer; */
+    z-index: 5;
+    min-width: 300px; /* 필요에 따라 최소 너비를 조정하세요. */
+    height: 60px;
+    line-height: 60px; /* 텍스트를 수직 가운데로 정렬합니다. */
+    text-align: center;
+}
+
+#dropdown {
+    visibility: hidden;
+}
+
+
+.dropdown {
+    
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    /* align-items: center;
+    align-items: baseline; */
+    /* justify-content: space-evenly; */
+    flex-direction: row; /* 세로 방향으로 정렬 */
+    gap: 13%; /* 필요한 간격 설정 */
+}
+
+.dropdown > div {
+    /* transform: translate(0, -100%); */
+    /* width: 800px; */
+    transition: 0.5s 0.1s;
+    position: relative;
+    /* align-items: stretch; */
+}
+
+.dropdown a {
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    padding: 0;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    /* background-color: aquamarine; */
+    margin-right: 10px;
+}
+
+.dropdown a:hover {
+    /* background-color: #8FB8CA; */
+    background-color: #b1e2f5;
+}
+
+.top{
+    margin-left: 440px;
+    /* padding-right: 30px; */
+}
+
+.bottom{
+    margin-left: 15px;
+}
+
+.outer{
+    margin-left: 13px;
+}
+
+.shoes{
+    margin-left: 15px;
+}
+
