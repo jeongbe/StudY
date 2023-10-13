@@ -63,18 +63,23 @@ a:hover {
 }
 
 #dropdown {
-    visibility: hidden;
+    display: block;
+   
 }
 
+/* .top{
+    bottom: 1000px;
+} */
 
 .dropdown {
     
-    width: 1200px;
-    height: 800px;
+    width: 1600px;
+    height: 200px;
+    /* margin: auto 0; */
+    bottom: 8px;
+    left: 150px;
     display: flex;
-    /* align-items: center;
-    align-items: baseline; */
-    /* justify-content: space-evenly; */
+    justify-content: center;
     flex-direction: row; /* 세로 방향으로 정렬 */
     gap: 13%; /* 필요한 간격 설정 */
 }
@@ -84,6 +89,8 @@ a:hover {
     /* width: 800px; */
     transition: 0.5s 0.1s;
     position: relative;
+    display: inline-block;
+    justify-content: start;
     /* align-items: stretch; */
 }
 
@@ -107,19 +114,20 @@ a:hover {
 }
 
 .top{
-    margin-left: 440px;
-    /* padding-right: 30px; */
+    left: 290px;
+    bottom: 40px;
 }
 
 .bottom{
-    margin-left: 15px;
+    left: 460px;
 }
 
-.outer{
-    margin-left: 13px;
+.outer {
+    left: 620px;
 }
 
 .shoes{
-    margin-left: 15px;
+    left: 790px;
+    bottom: 40px;
 }
 
