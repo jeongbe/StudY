@@ -12,6 +12,11 @@ a:hover {
     color: inherit; /* 링크의 색상 제거 */
 }
 
+body{
+    width: auto;
+    height: auto;
+}
+
 .carousel-inner {
     margin: auto;
     display: block;
@@ -54,6 +59,7 @@ a:hover {
     display: inline-block;
     position: relative;
     padding: 0 20px;
+    top: 5px;
     /* cursor: pointer; */
     z-index: 5;
     min-width: 300px; /* 필요에 따라 최소 너비를 조정하세요. */
@@ -63,20 +69,16 @@ a:hover {
 }
 
 #dropdown {
-    display: block;
-   
+    display: none;
 }
 
-/* .top{
-    bottom: 1000px;
-} */
 
 .dropdown {
     
-    width: 1600px;
+    width: 100%;
     height: 200px;
     /* margin: auto 0; */
-    bottom: 8px;
+    bottom: 10px;
     left: 150px;
     display: flex;
     justify-content: center;
@@ -86,7 +88,7 @@ a:hover {
 
 .dropdown > div {
     /* transform: translate(0, -100%); */
-    /* width: 800px; */
+    /* width: auto; */
     transition: 0.5s 0.1s;
     position: relative;
     display: inline-block;
@@ -131,3 +133,35 @@ a:hover {
     bottom: 40px;
 }
 
+.cards {
+    display: flex;
+    max-width: 1400px; /* 최대 너비를 1400px로 설정 */
+    width: 100%; /* 최대 너비를 넘어가지 않도록 100%로 설정 */
+    
+    align-items: center;
+    justify-content: space-evenly; /* 가로 방향 가운데 정렬 */
+    margin: 0 auto; /* 좌우 여백을 자동으로 설정하여 화면 중앙으로 정렬 */
+    margin-top: 90px;
+}
+
+.btn {
+    margin-top: 50px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn2 {
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS 파일 또는 <style> 태그 안에서 */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 47%; /* 적절한 간격 설정 */
+}
