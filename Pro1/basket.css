@@ -38,10 +38,12 @@
 .clickdelete {
     margin-left: 50%;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .Alldelete {
     margin-top: 5px;
+    cursor: pointer;
 }
 
 input[type='checkbox'] {
@@ -72,7 +74,12 @@ input[type='checkbox'] {
 .products {
     margin-left: 20%;
     margin-top: 20px;
+    display: block;
+}
+
+.product{
     display: flex;
+    margin-bottom: 40px;
 }
 
 .product_info {
@@ -98,4 +105,15 @@ input[type='checkbox'] {
     width: 30px;
     height: 30px;
     margin-left: 50%;
+    cursor: pointer;
+}
+
+.btn{
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 200px;
+    width: 200px;
+    height: 60px;
+    font-size: 20px
 }

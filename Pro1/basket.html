@@ -116,13 +116,53 @@
             <h1 class="title">장바구니</h1>
         </div>
         <div class="body_content">
-            <div class="Allclick"><input type="checkbox" /> 전체선택(0/2)</div>
+            <div class="Allclick"><input type="checkbox" id="Allc" /> 전체선택(0/2)</div>
             <p class="clickdelete">선택삭제/</p>
             <p class="Alldelete">전체삭제</p>
         </div>
         <div class="line"></div>
         <div class="products">
-            <input type="checkbox" />
+            <div class="product">
+            <input type="checkbox" class="chk" />
+            <img
+                src="/Pro1/image/willow-warbler-8071472_1280.jpg"
+                class="img-thumbnail produces_image"
+                alt="..."
+            />
+            <div class="product_info">
+                <div class="product_name">상품명</div>
+                <div class="product_size">S</div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#">-</a>
+                        </li>
+                        <li class="page-item disabled">
+                            <a
+                                class="page-link"
+                                href="#"
+                                tabindex="-1"
+                                aria-disabled="true"
+                                >1</a
+                            >
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">+</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="product_pirce">10,000원</div>
+            </div>
+            <img
+                src="/Pro1/image/xmark-solid.svg"
+                class="Ximg"
+                alt=""
+                srcset=""
+            />
+        </div>
+
+        <div class="product">
+            <input type="checkbox" class="chk" />
             <img
                 src="/Pro1/image/lovebird-8244066_1280.jpg"
                 class="img-thumbnail produces_image"
@@ -158,6 +198,10 @@
                 alt=""
                 srcset=""
             />
+        </div>
+        </div>
+        <div class="btn">
+            <button type="button" class="btn btn-info">결제하기</button>
         </div>
         <script src="/Pro1/basket.js"></script>
     </body>
