@@ -1,4 +1,4 @@
-table tr{
+.tcss tr{
     border: 1px solid black;
     /* background-color: #b1e2f5; */
 }
@@ -9,12 +9,18 @@ table{
     width: 800px;
 }
 
-td{
-    height: 30px;
+ td{
+    height: 40px;
+    padding-top: 8px;
+    /* padding-left: 10px; */
+}
+
+.backC{
+    background-color: #E9ECEF;
 }
 
 .tab{
-    background-color: #E9ECEF;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +29,84 @@ td{
 img{
     width: 100px;
     height: 100px;
+    margin: 10px;
+
+}
+
+.tit{
+    background-color: #b1e2f5;
+}
+
+.terms{
+    margin-top: 80px;
+    margin-left: 28%;
+}
+
+.terms > p {
+    margin-bottom: 10px;
+}
+
+.line {
+    align-items: center;
+    justify-content: center;
+    width: 780px;
+    border-bottom: 2px solid #c5c1c1;
+    /* margin: 10px auto; */
+}
+
+.check_boxs{
+    margin-top: 20px;
+}
+
+.ch{
+    margin-bottom: 20px;
+}
+
+.check{
+    margin-left: 30px;
+    margin-bottom: 9px;
+}
+
+.btn{
+    /* display: flex; */
+    margin-left: 42%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 300px;
+}
+
+.table2 > img {
+    margin-left: 10px;
 }
 
 
+.table2 tr:first-child{
+    border: 1px solid black;
+}
+
+.table2 tr:nth-child(2){
+    border: 1px solid black;
+}
+
+.table2 tr:nth-child(3){
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.table2 tr:nth-child(4){
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.table1 td:nth-child(1){
+    padding-left: 10px;
+}
+
+.table2 td:nth-child(1){
+    padding-left: 10px;
+}
+
+.table3 td:nth-child(1){
+    padding-left: 10px;
+}
