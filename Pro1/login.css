@@ -1,0 +1,77 @@
+img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.form_content {
+    margin-top: 10%;
+    width: 1745px;
+    /* height: 00px; */
+}
+
+.form {
+    display: grid;
+    place-items: center;
+    height: 350px;
+}
+
+input[type="text"] {
+    width: 280px;
+    height: 40px;
+}
+
+
+input[type="password"] {
+    width: 280px;
+    height: 40px;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list > p {
+    font-size: 13px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.list > p:hover{
+    background-color: #b1e2f5;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.id , .pasw{
+    margin-left: 30px;
+    /* background-color: aqua; */
+    margin-bottom: 30px;
+}
+
+.btn_div{
+    text-align: center;
+}
+
+.warning{
+    margin-top: 5px;
+    color: red;
+    font-size: 12px;
+}
+
+.btn{
+    width: 220px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #b1e2f5;
+    border: none;
+    cursor: pointer;
+}

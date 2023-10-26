@@ -1,112 +1,176 @@
-.tcss tr{
-    border: 1px solid black;
-    /* background-color: #b1e2f5; */
-}
-
-table{
-    background-color: white;
-    margin-top: 50px;
-    width: 800px;
-}
-
- td{
-    height: 40px;
-    padding-top: 8px;
-    /* padding-left: 10px; */
-}
-
-.backC{
+body {
     background-color: #E9ECEF;
 }
 
-.tab{
-
+.order {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-img{
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-
-}
-
-.tit{
-    background-color: #b1e2f5;
-}
-
-.terms{
-    margin-top: 80px;
-    margin-left: 28%;
-}
-
-.terms > p {
-    margin-bottom: 10px;
-}
-
-.line {
     align-items: center;
     justify-content: center;
-    width: 780px;
-    border-bottom: 2px solid #c5c1c1;
-    /* margin: 10px auto; */
 }
 
-.check_boxs{
-    margin-top: 20px;
+.title {
+    margin-top: 70px;
+    margin-bottom: 40px;
 }
 
-.ch{
-    margin-bottom: 20px;
+
+
+p{
+    padding-top: 5px;
 }
 
-.check{
-    margin-left: 30px;
-    margin-bottom: 9px;
+.title>p {
+    font-size: 25px;
 }
 
-.btn{
-    /* display: flex; */
-    margin-left: 42%;
-    margin-top: 50px;
-    margin-bottom: 100px;
+input[type="text"] {
+    width: 100px;
+    height: 30px;
+    /* margin-left: 20px0; */
+    /* margin-bottom: 20px; */
+}
+
+.mar{
+    position: relative;
+    margin-left: 80px;
+    bottom: 8px;
+    margin-right: 60px;
+    /* margin-bottom: 100px; */
+}
+
+.mar_2{
+    /* background-color: red; */
+    position: relative;
+    bottom: 3px;
+}
+
+select {
+    width: 150px;
+    height: 30px;
+}
+
+.sel{
     width: 300px;
 }
 
-.table2 > img {
+.border_ {
+    width: 800px;
+    height: 45px;
+    border: 1px solid black;
+    display: flex;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.dis {
+    display: flex;
+}
+
+.v1{
+    margin-right: 130px;
+}
+
+.v2{
+    margin-right: 205px;
+}
+
+.v3{
+    margin-right: 70px;
+}
+
+.prod_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.prod_img{
+    width: 100px;
+    height: 100px;
+}
+
+.border2_{
+    width: 800px;
+    height: 120px;
+    border: 1px solid black;
+    display: flex;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.pord_infos p:nth-child(1){
+    margin-right: 250px;
+}
+
+.pord_infos > p{
+    margin-right: 60px;
+}
+
+.prod_info2{
+    width: 150px;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-right: 23px;
+}
+
+.prod_info2 p:first-child{
+    margin-bottom: 10px;
+}
+
+.prod_info3 > p{
+    /* width: 90px; */
+    margin-right: 60px;
+    margin-top: 40px;
+}
+
+.prod_info3 p:first-child{
+    margin-left: 55px;
+}
+
+.border3_{
+    width: 800px;
+    height: 45px;
+    border: 1px solid black;
+    display: flex;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.coupon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.backC{
+    background-color: #b1e2f5;
+    font-weight: 600;
+}
+
+.mar_3{
     margin-left: 10px;
 }
 
-
-.table2 tr:first-child{
-    border: 1px solid black;
+.mar_4{
+    margin-left: 30px;
 }
 
-.table2 tr:nth-child(2){
-    border: 1px solid black;
+.check_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
-.table2 tr:nth-child(3){
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-.table2 tr:nth-child(4){
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
-.table1 td:nth-child(1){
-    padding-left: 10px;
-}
-
-.table2 td:nth-child(1){
-    padding-left: 10px;
-}
-
-.table3 td:nth-child(1){
-    padding-left: 10px;
+.btn{
+    width: 190px;
 }
