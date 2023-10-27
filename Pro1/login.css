@@ -33,6 +33,7 @@ input[type="password"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 40px;
 }
 
 .list > p {
@@ -51,14 +52,26 @@ input[type="password"] {
     margin-bottom: 30px;
 }
 
-.id , .pasw{
+.id{
     margin-left: 30px;
     /* background-color: aqua; */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+.id > p {
+    position: relative;
+    margin-left: 30px;
+    bottom: 10px;
+}
+
+.pasw{
+    margin-left: 60px;
+    margin-bottom: 50px;
 }
 
 .btn_div{
     text-align: center;
+    margin-left: 30px;
 }
 
 .warning{
