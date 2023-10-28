@@ -1,0 +1,15 @@
+.agree_container {
+    margin-top: 10%;
+    /* width: 1745px; */
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > img {
+    width: 150px;
+    height: 100px;
+    display: flex;
+}

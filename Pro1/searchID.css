@@ -1,7 +1,11 @@
 .form_content {
     margin-top: 10%;
-    width: 1745px;
-    /* height: 00px; */
+    /* width: 1745px; */
+    width: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form {
@@ -18,19 +22,18 @@
     margin: 10px auto;
 }
 
-input[type="text"] {
+input[type='text'] {
     width: 250px;
     height: 40px;
 }
 
-
-input[type="number"] {
+input[type='number'] {
     width: 250px;
     height: 40px;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -41,33 +44,40 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: 30px;
 }
 
-.input_container{
+.input_container {
     margin-right: 50px;
     height: 150px;
     justify-content: center;
     align-items: center;
 }
 
-.name_box , .number_box{
+.name_box,
+.number_box {
     display: flex;
+}
+
+.name_box {
+    margin-bottom: 20px;
 }
 
 .name_box > p {
     width: 70px;
     text-align: center;
+    margin-top: 15px;
 }
 
 .number_box > p {
     width: 70px;
     text-align: center;
+    margin-top: 15px;
 }
 
-.btn_div{
+.btn_div {
     text-align: center;
     margin-left: 10px;
 }
 
-.btn{
+.btn {
     width: 220px;
     height: 40px;
     border-radius: 10px;

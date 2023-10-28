@@ -22,6 +22,11 @@
     margin: 10px auto;
 }
 
+input[type='text'] {
+    width: 250px;
+    height: 40px;
+}
+
 .title {
     font-size: 30px;
     text-align: center;
@@ -29,7 +34,7 @@
 }
 
 .info {
-    margin-right: 50px;
+    margin-right: 120px;
     height: 150px;
     justify-content: center;
     align-items: center;
@@ -37,33 +42,39 @@
 
 .info > p {
     text-align: center;
-    margin-left: 50px;
+    margin-left: 130px;
+    margin-bottom: 20px;
 }
 
-.name_box > p {
-    width: 70px;
-    text-align: center;
+.change_pasw,
+.check_pasw {
+    display: flex;
 }
 
-.find_id {
-    border: 1px solid black;
-    margin-left: 50px;
-    height: 40px;
-    margin-top: 30px;
-    border-radius: 10px;
-    text-align: center;
+.change_pasw {
+    margin-left: 28px;
+    margin-bottom: 20px;
 }
 
-.find_id > p {
-    display: inline-block;
-    text-align: center;
-    margin: auto;
+.change_pasw > p {
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+.check_pasw {
+    position: relative;
+    right: 9px;
+}
+
+.check_pasw > p {
+    padding-right: 10px;
     margin-top: 10px;
 }
 
 .btn_div {
     text-align: center;
     margin-left: 10px;
+    margin-top: 30px;
 }
 
 .btn {
