@@ -163,5 +163,5 @@ function c_Check() {
 
 // "다음" 버튼 클릭 시 페이지 이동
 btn.onclick = () => {
-    location.href = '/logins/login/join.html';
+    location.href = '/Pro1/join.html';
 };

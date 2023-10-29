@@ -1,5 +1,5 @@
 body {
-    background-color: #E9ECEF;
+    background-color: #e9ecef;
 }
 
 .order {
@@ -13,24 +13,22 @@ body {
     margin-bottom: 40px;
 }
 
-
-
-p{
+p {
     padding-top: 5px;
 }
 
-.title>p {
+.title > p {
     font-size: 25px;
 }
 
-input[type="text"] {
+input[type='text'] {
     width: 100px;
     height: 30px;
     /* margin-left: 20px0; */
     /* margin-bottom: 20px; */
 }
 
-.mar{
+.mar {
     position: relative;
     margin-left: 80px;
     bottom: 8px;
@@ -38,7 +36,7 @@ input[type="text"] {
     /* margin-bottom: 100px; */
 }
 
-.mar_2{
+.mar_2 {
     /* background-color: red; */
     position: relative;
     bottom: 3px;
@@ -49,7 +47,7 @@ select {
     height: 30px;
 }
 
-.sel{
+.sel {
     width: 300px;
 }
 
@@ -64,35 +62,51 @@ select {
     background-color: white;
 }
 
+.count {
+    position: relative;
+    left: 140px;
+    /* margin-right: 400px; */
+}
+
+.pri {
+    position: relative;
+    left: 80px;
+}
+
+.border_ p:nth-child(2) {
+    width: 200px;
+    text-align: center;
+}
+
 .dis {
     display: flex;
 }
 
-.v1{
+.v1 {
     margin-right: 130px;
 }
 
-.v2{
+.v2 {
     margin-right: 205px;
 }
 
-.v3{
+.v3 {
     margin-right: 70px;
 }
 
-.prod_info{
+.prod_info {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 70px;
 }
 
-.prod_img{
+.prod_img {
     width: 100px;
     height: 100px;
 }
 
-.border2_{
+.border2_ {
     width: 800px;
     height: 120px;
     border: 1px solid black;
@@ -103,36 +117,41 @@ select {
     background-color: white;
 }
 
-.pord_infos p:nth-child(1){
+.pord_infos p:nth-child(1) {
     margin-right: 250px;
 }
 
-.pord_infos > p{
+.pord_infos > p {
     margin-right: 60px;
 }
 
-.prod_info2{
-    width: 150px;
+.prod_info2 {
+    width: 330px;
     margin-left: 20px;
     margin-top: 10px;
-    padding-right: 23px;
+    /* padding-right: 23px; */
 }
 
-.prod_info2 p:first-child{
+.prod_info2 p:first-child {
     margin-bottom: 10px;
 }
 
-.prod_info3 > p{
-    /* width: 90px; */
-    margin-right: 60px;
+.prod_info3 {
+    position: relative;
+    left: 40px;
+}
+
+.prod_info3 > p {
+    /* width: 115px; */
+    margin-right: 90px;
     margin-top: 40px;
 }
 
-.prod_info3 p:first-child{
+.prod_info3 p:first-child {
     margin-left: 55px;
 }
 
-.border3_{
+.border3_ {
     width: 800px;
     height: 45px;
     border: 1px solid black;
@@ -143,27 +162,27 @@ select {
     background-color: white;
 }
 
-.coupon{
+.coupon {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 70px;
 }
 
-.backC{
+.backC {
     background-color: #b1e2f5;
     font-weight: 600;
 }
 
-.mar_3{
+.mar_3 {
     margin-left: 10px;
 }
 
-.mar_4{
+.mar_4 {
     margin-left: 30px;
 }
 
-.check_btn{
+.check_btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,6 +190,6 @@ select {
     margin-bottom: 80px;
 }
 
-.btn{
+.btn {
     width: 190px;
 }
