@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        {{>layouts/header}}
+    </header>
+
+    <div class="main_title">
+        <!-- <img src="/Pro1/image/chevron-left-solid.svg" class="backIcon" alt="" /> -->
+        <h1 class="title">장바구니</h1>
+    </div>
+    <div class="body_content">
+        <div class="Allclick"><input type="checkbox" id="Allc" />
+            전체선택<span class="checkbox-count">(0/3)</span>
+        </div>
+        <p class="clickdelete">선택삭제/</p>
+        <p class="Alldelete">전체삭제</p>
+    </div>
+    <div class="line2"></div>
+    <!--아이템 들어오는 부분-->
+    <form action="/shopping/cartbox/{id}" method="get">
+        {{#basketList}}
+        <div class="products">
+            <div class="product" onclick="find(this)">
+                <input type="checkbox" class="chk" />
+                <!-- <img src="/Pro1/image/willow-warbler-8071472_1280.jpg" class="img-thumbnail produces_image" alt="..." /> -->
+                <div class="product_info">
+                    <p id="cart_code" hidden>11</p>
+                    <p class="product_name">바지</p>
+                    <p class="product_size">사이즈: s</p>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item minusBtn">
+                                <a class="page-link" href="#">-</a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                    <p class="prodCount">1</p>
+                                </a>
+                            </li>
+                            <li class="page-item plusBtn">
+                                <a class="page-link" href="#">+</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p class="prod_total" style="display: none;">10000</p>
+                    <p class="product_pirce" name="prod_price">10000원</p>
+                </div>
+                <!-- <img src="/Pro1/image/xmark-solid.svg" class="Ximg" alt="" srcset="" /> -->
+            </div>
+        </div>
+        <div class="products">
+            <div class="product">
+                <input type="checkbox" class="chk" />
+                <!-- <img src="/Pro1/image/willow-warbler-8071472_1280.jpg" class="img-thumbnail produces_image" alt="..." /> -->
+                <div class="product_info" onclick="find(this)">
+                    <p id="cart_code" hidden>12</p>
+                    <p class="product_name">신발</p>
+                    <p class="product_size">사이즈: s</p>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item minusBtn">
+                                <a class="page-link" href="#">-</a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                    <p class="prodCount">1</p>
+                                </a>
+                            </li>
+                            <li class="page-item plusBtn">
+                                <a class="page-link" href="#">+</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p class="prod_total" style="display: none;">10000</p>
+                    <p class="product_pirce" name="prod_price">10000원</p>
+                </div>
+                <!-- <img src=" /Pro1/image/xmark-solid.svg" class="Ximg" alt="" srcset="" /> -->
+            </div>
+        </div>
+        {{/basketList}}
+        <div class="btn__">
+            <button type="submit" class="btn_ btn-info">결제하기</button>
+        </div>
+    </form>
+    <script>
+
+        // 장바구니에 있는 모든 상품의 ID를 배열로 저장
+        let cartItemIds = Array.from(document.querySelectorAll("#cart_code")).map(item => item.textContent);
+        console.log("장바구니 item 코드: " + cartItemIds);
+        console.log("장바구니 item 코드: " + cartItemIds[0]);
+
+
+
+        <!--        각 상품 객체를 가져온다.-->
+        function find(prod) {
+
+            let targetElement = prod.querySelector('.prodCount');
+            let targetText = "";
+
+            if (targetElement) {
+                targetText = parseInt(targetElement.textContent);
+                // console.log(targetText);
+            } else {
+                console.log('.prodCount 요소를 찾을 수 없습니다.');
+            }
+
+            //각 상품 가격 가져오기
+            let prod_price = prod.querySelector('.product_pirce');
+            let price_text = parseInt(prod_price.textContent);
+
+            let prod_total = prod.querySelector('.prod_total');
+            let prod_total2 = parseInt(prod_total.textContent);
+
+
+            let plusBtn = prod.querySelector('.plusBtn'); // 현재 상품 내에서 plusBtn을 찾음
+            let minusBtn = prod.querySelector(".minusBtn");  //현재 상품에서 minusBtn 찾음
+
+            //플러스 버튼 클릭했을때
+            plusBtn.onclick = () => {
+                if (targetText < 10) {
+                    targetText++;
+                    targetElement.textContent = targetText; // .prodCount 값을 업데이트
+
+                    //토탈에 값을 다 더해줘서 마지막에 가격(보이는)에 넣어준다.
+                    prod_price.textContent = prod_total2 * targetText;
+                    console.log(" 상품가격" + prod_total.textContent);
+                    console.log( "토탈 상품가격"+ prod_price.textContent);
+                }
+            }
+
+            minusBtn.onclick = () => {
+                if (targetText != 1) {
+                    targetText--;
+                    targetElement.textContent = targetText; // .prodCount 값을 업데이트
+
+                    // console.log("상품 토탈" + prod_total2);
+                    prod_price.textContent = price_text - prod_total2;
+                    console.log(" 상품가격" + prod_total.textContent);
+                    console.log( "토탈 상품가격"+ prod_price.textContent);
+                }
+            }
+        }
+
+
+
+        // //마이너스 버튼 클릭했을때
+        // if (minusBtn) {
+        //     minusBtn.addEventListener("click", () => {
+        //         if (targetText != 1) {
+        //             targetText--;
+        //             targetElement.textContent = targetText; // .prodCount 값을 업데이트
+        //         }
+        //         console.log(targetText);
+        //     });
+        // }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -27,10 +27,10 @@
                             <p class="title">로그인 정보</p>
                             <div class="box">
                                 <div>
-                                    <input type="text" placeholder="아이디" />
+                                    <input type="text" id="id" placeholder="아이디" />
                                     <button class="chk_btn">중복 확인</button>
                                 </div>
-                                <p class="warning" hidden>
+                                <p class="warning " id="Wid" hidden>
                                     아이디를 입력해주세요
                                 </p>
                             </div>
@@ -41,9 +41,10 @@
                                         name=""
                                         id=""
                                         placeholder="비빌번호"
+                                        class="pasw"
                                     />
                                 </div>
-                                <p class="warning" hidden>
+                                <p class="warning Wpasw" hidden>
                                     비밀번호를 입력해주세요
                                 </p>
                             </div>
@@ -54,9 +55,10 @@
                                         name=""
                                         id=""
                                         placeholder="비밀번호 확인"
+                                        class="chk_pasw"
                                     />
                                 </div>
-                                <p class="warning" hidden>
+                                <p class="warning ChWpasw" hidden>
                                     비밀번호가 틀렸습니다.
                                 </p>
                             </div>
@@ -142,7 +144,7 @@
                     </div>
                     <div class="sub_btn">
                         <div>
-                            <button type="button" class="btn btn-info">
+                            <button type="button" class="btn btn-info sub_btn">
                                 가입하기
                             </button>
                         </div>
@@ -150,5 +152,6 @@
                 </form>
             </div>
         </div>
+        <script src="/Pro1/join.js"></script>
     </body>
 </html>
