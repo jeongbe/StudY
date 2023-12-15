@@ -169,3 +169,9 @@ nav {
     height: 28px;
     width: 28px;
 }
+
+.s_btn{
+    width: 80px;
+    height: 28px;
+    background-image: url("/Pro1/image/baseline_search_black_24dp.png");
+}

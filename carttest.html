@@ -102,6 +102,12 @@
         <!--        각 상품 객체를 가져온다.-->
         function find(prod) {
 
+            var checkBox = document.querySelector(".chk");
+            checkBox.onclick = () => {
+                var checkResult = checkBox.checked;
+                console.log(checkResult);
+            }
+
             let targetElement = prod.querySelector('.prodCount');
             let targetText = "";
 
