@@ -56,3 +56,17 @@
 .point {
     color: #c69774;
 }
+
+.displaylayout{
+    display: flex;
+}
+
+.container{
+    /* background-color: aqua; */
+    margin-left: 8%;
+    margin-top: 8%;
+    width: 1100px;
+}
+
+
+
