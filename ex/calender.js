@@ -3,26 +3,37 @@ var date = new Date();
 var currentYear = date.getFullYear();
 var currentMonth = date.getMonth() + 1; // 0부터 시작하므로 +1을 해준다.
 
-var monthdown = document.querySelector(".MonthDown");
-var monthup = document.querySelector(".MonthUp");
+var monthdown = document.querySelector('.MonthDown');
+var monthup = document.querySelector('.MonthUp');
 
+var Year = currentYear;
+var Month = currentMonth;
 
-const Year = parseInt(prompt("년도를 입력하세요"));
-const Month = parseInt(prompt("달을 입력하세요"));
-
-var YearText = document.getElementById("YearText");
-var MonthText = document.getElementById("MonthText");
+var YearText = document.getElementById('YearText');
+var MonthText = document.getElementById('MonthText');
 
 YearText.innerHTML = `<h1 class="YearText">${Year}</h1>`;
 MonthText.innerHTML = `<h1 class="MonthText">${Month}</h1>`;
 
-monthdown.onclick = () =>{
-	MonthText.innerHTML = `<h1 class="MonthText">${Month-1}</h1>`;
-}
+monthdown.onclick = () => {
+    if (Month > 1) {
+        Month--;
+    } else {
+        Month = 12;
+        Year--;
+    }
+    updateCalendar();
+};
 
 monthup.onclick = () => {
-	MonthText++;
-}
+    if (Month < 12) {
+        Month++;
+    } else {
+        Month = 1;
+        Year++;
+    }
+    updateCalendar();
+};
 
 // 달력 생성 함수
 function generateCalendar(year, month) {
@@ -30,50 +41,77 @@ function generateCalendar(year, month) {
     var calMonth = month;
 
     var MonthLastDate = new Date(calenderYear, calMonth, 0);
-	console.log(MonthLastDate);
+    console.log(MonthLastDate);
 
     var calMonthLastDate = MonthLastDate.getDate();
-	console.log(calMonthLastDate);
+    console.log(calMonthLastDate);
 
-    var MonthStartDate = new Date(calenderYear, calMonth - 1, 1); // -1을 해줘야 원하는 달의 시작일을 얻을 수 있다.
-	console.log(MonthStartDate);
+    // 주의 시작 요일을 일요일(0)로 설정
+    var calMonthStartDate = new Date(calenderYear, calMonth - 1, 1).getDay();
 
-    var calMonthStartDate = MonthStartDate.getDay();
-	console.log(calMonthStartDate)
+    console.log(calMonthStartDate);
 
     var calWeekCount = Math.ceil((calMonthStartDate + calMonthLastDate) / 7);
-	console.log(calWeekCount)
+    console.log(calWeekCount);
 
-    var html = "";
-    html += "<table style=\"border-collapse: collapse; margin-left: auto; margin-right: auto;\">";
-	//위치
+    var html = '';
+    html +=
+        '<table style="border-collapse: collapse; margin-left: auto; margin-right: auto;">';
+    //위치
     var calendarPos = 0;
-	//날짜
+    //날짜
     var calendarDay = 0;
-	html = "<tr><th>월</th> <th>화</th><th>수</th><th>목</th><th>금</th><th>토</th><th>일</th></tr>"
-	// html = "<tr><th>수</th></tr>"
-	// html = "<tr><th>목</th></tr>"
-	// html = "<tr><th>금</th></tr>"
-	// html = "<tr><th>토</th></tr>"
-	// html = "<tr><th>일</th></tr>"
-    for (var index1 = 0; index1 < calWeekCount; index1++) {  //tr을 weekCount만큼 반복해줌 즉 6번 
-        html += "<tr>";
-		
+    html +=
+        '<tr style="height:50px";><th style="color: red;">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th style="color: blue;">토</th></tr>';
+    for (var index1 = 0; index1 < calWeekCount; index1++) {
+        //tr을 weekCount만큼 반복해줌 즉 6번
+        html += '<tr>';
+
         for (var index2 = 0; index2 < 7; index2++) {
-            html += "<td style=\"border: solid 1px black; padding: 10px 10px; text-align: center;\">";
-            if (calMonthStartDate <= calendarPos && calendarDay < calMonthLastDate) {
-                calendarDay++;
-                html += "<span style=\"display: block; padding: 10px 10px;\">" + calendarDay + "</span>";
+            var isSunday = index2 === 0; // 일요일 확인
+            var isSaturday = index2 === 6; // 토요일 확인
+            var cellStyle =
+                'border: solid 1px black; width:150px; height:150px;';
+            if (isSunday) {
+                cellStyle += 'color: red;';
+            } else if (isSaturday) {
+                cellStyle += 'color: blue;';
             }
-            html += "</td>";
+            html += `<td style="${cellStyle}">`;
+            if (
+                calMonthStartDate <= calendarPos &&
+                calendarDay < calMonthLastDate
+            ) {
+                calendarDay++;
+                html +=
+                    '<span style="display: flex; padding: 10px; position: relative; bottom: 50px;">' +
+                    calendarDay +
+                    '</span>';
+                if (calendarDay === 10 && calMonth === 1) {
+                    html += '<span style="display:flex"> 면접 일정</span>';
+                }
+            } else {
+                html +=
+                    '<span style="display: block; padding: 10px 10px;"></span>';
+            }
+            html += '</td>';
             calendarPos++;
         }
-        html += "</tr>";
+        html += '</tr>';
     }
-    html += "</table>";
+    html += '</table>';
     return html;
 }
 
-// 해당 년도와 달의 달력을 생성하여 페이지에 추가
-var calendar = generateCalendar(Year, Month);
-$("#calendar").html(calendar);
+// 달력 업데이트 함수
+function updateCalendar() {
+    YearText.innerHTML = `<h1 class="YearText">${Year}</h1>`;
+    MonthText.innerHTML = `<h1 class="MonthText">${Month}</h1>`;
+
+    // 새로운 월과 연도에 대한 달력을 생성하고 업데이트합니다.
+    var calendar = generateCalendar(Year, Month);
+    $('#calendar').html(calendar);
+}
+
+// 페이지 로드 시 달력 업데이트
+updateCalendar();
