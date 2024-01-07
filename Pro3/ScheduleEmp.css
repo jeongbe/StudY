@@ -95,6 +95,10 @@ input[type='email'] {
     border: none;
 }
 
+input[type='number'] {
+    border: none;
+}
+
 input:focus {
     outline: 0;
 }
@@ -117,4 +121,10 @@ button {
 .outline input {
     /* background-color: aqua; */
     width: 900px;
+}
+
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
