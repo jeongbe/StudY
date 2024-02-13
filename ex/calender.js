@@ -13,7 +13,8 @@ var YearText = document.getElementById('YearText');
 var MonthText = document.getElementById('MonthText');
 
 YearText.innerHTML = `<h1 class="YearText">${Year}</h1>`;
-MonthText.innerHTML = `<h1 class="MonthText">${Month}</h1>`;
+MonthText.innerHTML = `<h1 class="MonthText">${Month}월</h1>`;
+
 
 monthdown.onclick = () => {
     if (Month > 1) {
@@ -62,7 +63,7 @@ function generateCalendar(year, month) {
     //날짜
     var calendarDay = 0;
     html +=
-        '<tr style="height:50px";><th style="color: red;">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th style="color: blue;">토</th></tr>';
+        '<tr class="days" style="height:50px";><th style="color: red;">일요일</th><th>월요일</th><th>화요일</th><th>수요일</th><th>목요일</th><th>금요일</th><th style="color: blue;">토요일</th></tr>';
     for (var index1 = 0; index1 < calWeekCount; index1++) {
         //tr을 weekCount만큼 반복해줌 즉 6번
         html += '<tr>';
@@ -84,11 +85,13 @@ function generateCalendar(year, month) {
             ) {
                 calendarDay++;
                 html +=
-                    '<span style="display: flex; padding: 10px; position: relative; bottom: 50px;">' +
+                    '<span style="display: flex; padding: 10px; position: relative; bottom: 20px;">' +
                     calendarDay +
                     '</span>';
                 if (calendarDay === 10 && calMonth === 1) {
-                    html += '<span style="display:flex"> 면접 일정</span>';
+                    html += '<span class="sch" style="display:flex"> 면접 일정</span>'
+                    html += '<span class="sch" style="display:flex"> 면접 일정</span>'
+                    html += '<span class="sch" style="display:flex"> 면접 일정</span>';
                 }
             } else {
                 html +=

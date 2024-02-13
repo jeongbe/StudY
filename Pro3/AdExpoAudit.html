@@ -1,77 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/Pro3/AdExpoAudit.css" />
-        <title>채용 박람회 심사</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="main_title">
-                <p>채용 박람회 심사</p>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/static/css/user/Mypage/users_body.css" rel="stylesheet" />
+    <link href="/static/css/user/Mypage/users_header.css" rel="stylesheet" />
+    <link href="/static/css/user/Mypage/users_side.css" rel="stylesheet" />
+    <link href="/static/css/user/Mypage/users_footer.css" rel="stylesheet" />
+    <script src="/static/js/comuser/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="/static/css/user/Mypage/Interview.css" />
+    <title>기업 면접 일정 관리</title>
+</head>
+<div class="s_header" th:replace="~{comuser/header/comHeader :: comHeader}"></div>
+<!-- header 끝 -->
+
+<body>
+<main>
+    <content>
+        <div class="body">
+            <div class="body_title">
+                <span>면접</span>
+                <span>일정 관리</span>
             </div>
-            <div class="cho">
-                <p class="clo">심사전</p>
-                <p>심사완료</p>
+
+            <div class="body_title_right">
+                <img src="/static/images/home.png" alt="홈 아이콘" style="width: 20px;"> > 내 정보 > 면접 일정 관리
             </div>
+
+
+
+            <!-- 주요내용 -->
+            <div class="contents">
+                <div class="container">
+                    <div class="c_box">
+                        <button class="MonthDown"><</button>
+                        <h1 id="YearText" class=""></h1>
+                        <h1 id="MonthText" class=""></h1>
+                        <button class="MonthUp">></button>
+                        <button class="ins_" th:onclick="'javascript:openPopup(\'/com/save/inter/' + ${comCode} + '\', 300, 300)'">일정 추가</button>
+                    </div>
+
+                    <div id="calendar">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
         </div>
-        <table>
-            <tr>
-                <th>번호</th>
-                <th>회사명</th>
-                <th>제목</th>
-                <th>신청파일</th>
-                <th>승인 여부</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>예일회사</td>
-                <td>제목ㅇㅇ</td>
-                <td>
-                    <span
-                        ><img
-                            src="/Pro3/image/free-icon-zip-10435495.png"
-                            alt=""
-                    /></span>
-                </td>
-                <td>
-                    <button>승인</button>
-                    <button>비승인</button>
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>예일회사</td>
-                <td>제목ㅇㅇ</td>
-                <td>
-                    <span
-                        ><img
-                            src="/Pro3/image/free-icon-zip-10435495.png"
-                            alt=""
-                    /></span>
-                </td>
-                <td>
-                    <button>승인</button>
-                    <button>비승인</button>
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>예일회사</td>
-                <td>제목ㅇㅇ</td>
-                <td>
-                    <span
-                        ><img
-                            src="/Pro3/image/free-icon-zip-10435495.png"
-                            alt=""
-                    /></span>
-                </td>
-                <td>
-                    <button>승인</button>
-                    <button>비승인</button>
-                </td>
-            </tr>
-        </table>
-    </body>
+    </content>
+
+    <div class="sidefooter" th:replace="~{comuser/Side/Mypage/MyPageSide_2 :: MyPageSide_2}"></div>
+
+</main>
+</body>
+<script  th:inline="javascript">
+
+let Comsc = [[${list}]];
+    console.log(Comsc);
+
+
+function openPopup(url, width, height) {
+       var left = (screen.availWidth - width) / 2;
+       var top = (screen.availHeight - height) / 2;
+
+       var popup = window.open(url, 'popup', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+       popup.focus();
+    }
+
+
+
+// 현재 날짜 정보 가져옴
+var date = new Date();
+var currentYear = date.getFullYear();
+var currentMonth = date.getMonth() + 1; // 0부터 시작하므로 +1을 해준다.
+
+var monthdown = document.querySelector('.MonthDown');
+var monthup = document.querySelector('.MonthUp');
+
+var Year = currentYear;
+var Month = currentMonth;
+
+var YearText = document.getElementById('YearText');
+var MonthText = document.getElementById('MonthText');
+
+YearText.innerHTML = `<h1 class="YearText">${Year}</h1>`;
+MonthText.innerHTML = `<h1 class="MonthText">${Month}월</h1>`;
+
+
+monthdown.onclick = () => {
+   if (Month > 1) {
+       Month--;
+   } else {
+       Month = 12;
+       Year--;
+   }
+   updateCalendar();
+};
+
+monthup.onclick = () => {
+   if (Month < 12) {
+       Month++;
+   } else {
+       Month = 1;
+       Year++;
+   }
+   updateCalendar();
+};
+
+// 달력 생성 함수
+function generateCalendar(year, month) {
+   var calenderYear = year;
+   var calMonth = month;
+
+   var MonthLastDate = new Date(calenderYear, calMonth, 0);
+   console.log(MonthLastDate);
+
+   var calMonthLastDate = MonthLastDate.getDate();
+   console.log(calMonthLastDate);
+
+   // 주의 시작 요일을 일요일(0)로 설정
+   var calMonthStartDate = new Date(calenderYear, calMonth - 1, 1).getDay();
+
+   console.log(calMonthStartDate);
+
+   var calWeekCount = Math.ceil((calMonthStartDate + calMonthLastDate) / 7);
+   console.log(calWeekCount);
+
+   var html = '';
+   html +=
+       '<table style="border-collapse: collapse; margin-left: auto; margin-right: auto;">';
+   //위치
+   var calendarPos = 0;
+   //날짜
+   var calendarDay = 0;
+   html +=
+       '<tr class="days" style="height:50px";><th style="color: #ea8874; text-align:center;">일요일</th><th style="text-align:center;">월요일</th><th style="text-align:center;">화요일</th><th style="text-align:center;">수요일</th><th style="text-align:center;">목요일</th><th style="text-align:center;">금요일</th><th style="color: #374658; text-align:center;">토요일</th></tr>';
+   for (var index1 = 0; index1 < calWeekCount; index1++) {
+       //tr을 weekCount만큼 반복해줌 즉 6번
+       html += '<tr>';
+
+       for (var index2 = 0; index2 < 7; index2++) {
+           var isSunday = index2 === 0; // 일요일 확인
+           var isSaturday = index2 === 6; // 토요일 확인
+           var cellStyle =
+               'border: solid 1px #787878; width:150px; height:130px; position:relative;';
+           if (isSunday) {
+               cellStyle += 'color: #ea8874;';
+           } else if (isSaturday) {
+               cellStyle += 'color: #374658;';
+           }
+           html += `<td class="td_c" style="${cellStyle}">`;
+           if (
+               calMonthStartDate <= calendarPos &&
+               calendarDay < calMonthLastDate
+           ) {
+               calendarDay++;
+               html +=
+                   '<span id="day${calendarDay}" class="inter_td ic" style="display: flex; position: absolute; bottom: 85px; ">' +
+                   calendarDay +
+                   '</span>';
+               for(let i = 0; i < Comsc.length; i++) {
+                    let com_sc_start = Comsc[i].c_sc_start;
+
+                    let startDate = com_sc_start.split('-');
+                    d1 = startDate[0];
+                    d2 = startDate[1];
+                    d3 = startDate[2];
+
+                    console.log("sdfsdf",d1,d2,d3);
+                    if(calenderYear == d1 && calendarDay == d3 && calMonth == d2){
+                        html += `<span class="sch ic" style="display:flex; cursor: pointer;" onclick="openPopup('/com/update/sc/${Comsc[i].c_sc_num}', 300, 300)">${Comsc[i].c_sc_title}</span>`;
+
+                    }
+               }
+           } else {
+               html +=
+                   '<span style="display: block; padding: 10px 10px;"></span>';
+           }
+           html += '</td>';
+           calendarPos++;
+       }
+       html += '</tr>';
+   }
+   html += '</table>';
+   return html;
+}
+
+// 달력 업데이트 함수
+function updateCalendar() {
+   YearText.innerHTML = `<h1 class="YearText">${Year}</h1>`;
+   MonthText.innerHTML = `<h1 class="MonthText">${Month}</h1>`;
+
+   // 새로운 월과 연도에 대한 달력을 생성하고 업데이트합니다.
+   var calendar = generateCalendar(Year, Month);
+   $('#calendar').html(calendar);
+
+}
+
+// 페이지 로드 시 달력 업데이트
+updateCalendar();
+
+function openPopup(url, width, height) {
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+    const options = `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+
+    window.open(url, '_blank', options);
+}
+
+</script>
+
 </html>

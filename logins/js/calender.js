@@ -20,9 +20,8 @@ monthdown.onclick = () =>{
 	MonthText.innerHTML = `<h1 class="MonthText">${Month-1}</h1>`;
 }
 
-monthup.onclick = () => {
-	MonthText++;
-}
+
+
 
 // 달력 생성 함수
 function generateCalendar(year, month) {
@@ -77,3 +76,17 @@ function generateCalendar(year, month) {
 // 해당 년도와 달의 달력을 생성하여 페이지에 추가
 var calendar = generateCalendar(Year, Month);
 $("#calendar").html(calendar);
+
+monthup.onclick = () => {
+    Month++;
+    if (Month > 12) {
+        Month = 1;
+        Year++;
+    }
+    YearText.innerHTML = `<h1 class="YearText">${Year}</h1>`;
+    MonthText.innerHTML = `<h1 class="MonthText">${Month}</h1>`;
+
+    // 새로운 월과 연도에 대한 달력을 생성하고 업데이트합니다.
+    var calendar = generateCalendar(Year, Month);
+    $("#calendar").html(calendar);
+}
