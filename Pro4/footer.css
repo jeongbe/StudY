@@ -1,0 +1,78 @@
+/* 전체 페이지를 세로 플렉스 레이아웃으로 설정 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 메인 콘텐츠가 남은 공간을 채우도록 */
+.main_content {
+  flex: 1;
+}
+
+
+/* 반응형 - 모바일 화면 대응 */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+
+/* 푸터 */
+.site-footer {
+      /* 어두운 배경 */
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  margin-top: auto;           /* 화면 하단으로 밀어내기 핵심 */
+  box-shadow: 0 -2px 5px -2px rgba(0, 0, 0, 0.2);
+}
+
+.footer-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.line{
+  border: 1px solid #5a5757;
+      margin: 10px;
+}
+
+.f-bottem {
+  display: flex;
+ /*  gap: 10px;  */               /* 항목 간 간격 */
+/*   height: 20px; */
+}
+
+.footer-links{
+    width: 100%;              /* 블록 전체 폭 */
+  display: flex;
+  /* flex-direction: column;  */  /* 세로 정렬 유지 */
+  align-items: flex-start;  /* 왼쪽 정렬 */
+}
+
+.f-bottem p {
+  margin: 0;
+  line-height: 1.2; /* 기본 1.5 정도보다 낮게 */
+  color: black;
+      width: 380px;
+}
+
+.footer-links a , .footer-links span{
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  transition: color 0.3s ease;
+  margin-right: 20px;
+}
