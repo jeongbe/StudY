@@ -1,52 +1,111 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/Pro4/header.css" rel="stylesheet" />
-  <link href="/Pro4/main.css" rel="stylesheet" />
-  <link href="/Pro4/adminSide.css" rel="stylesheet" />
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <div class="leftGroup">
-      <a class="logo" href="#"><img src="" alt="로고" /></a>
-      <nav class="mainMenu">
-        <a href="#">보기</a>
-        <a href="#">달력</a>
-        <a href="#">자유게시판</a>
-        <a href="#">공지사항</a>
-      </nav>
-    </div>
-    <div class="header_right">
-      <div class="join">회원가입</div>
-      <div class="login">로그인</div>
-    </div>
-  </header>
-
-  <!-- 사이드 + 메인 컨테이너 -->
-  <div class="content-container">
-    <!-- 왼쪽 사이드바 -->
-    <aside class="ad-side">
-      <div class="ad-side-body">
-        <a href="#">상품등록</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/Pro4/header.css" rel="stylesheet" />
+    <link href="/Pro4/main.css" rel="stylesheet" />
+    <link href="/Pro4/adminSide.css" rel="stylesheet" />
+    <link href="/Pro4/adminMain.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="leftGroup">
+        <a class="logo" href="#"><img src="" alt="로고" /></a>
+        <nav class="mainMenu">
+          <a href="#">보기</a>
+          <a href="#">달력</a>
+          <a href="#">자유게시판</a>
+          <a href="#">공지사항</a>
+        </nav>
       </div>
-      <div class="ad-side-body"><a href="/">좋아요</a></div>
-      <div class="ad-side-body"><a href="/">마켓 등록</a></div>
-      <div class="ad-side-body"><a href="/">일정 관리</a></div>
-      <div class="ad-side-body"><a href="/">문의내역</a></div>
-      <div class="ad-side-body"><a href="/">회원 리스트</a></div>
-    </aside>
+      <div class="header_right">
+        <div class="join">회원가입</div>
+        <div class="login">로그인</div>
+      </div>
+    </header>
 
-    <!-- 오른쪽 메인 컨텐츠 -->
-    <main class="main-content">
-      <span>dfsf</span>
-      <span>dfsf</span>
-      <span>dfsf</span>
-      <span>dfsf</span>
-      <span>dfsf</span>
-    </main>
-  </div>
-</body>
+    <!-- 사이드 + 메인 컨테이너 -->
+    <div class="content-container">
+      <!-- 왼쪽 사이드바 -->
+      <aside class="ad-side">
+        <div class="ad-side-body">
+          <a href="#">상품등록</a>
+        </div>
+        <div class="ad-side-body"><a href="/">좋아요</a></div>
+        <div class="ad-side-body"><a href="/">마켓 등록</a></div>
+        <div class="ad-side-body"><a href="/">일정 관리</a></div>
+        <div class="ad-side-body"><a href="/">문의내역</a></div>
+        <div class="ad-side-body"><a href="/">회원 리스트</a></div>
+      </aside>
+
+      <!-- 오른쪽 메인 컨텐츠 -->
+      <form action="" method="post">
+        <main class="ad-main-content">
+          <div class="ad-title">
+            <p>등록</p>
+          </div>
+          <div class="ad-inset-info">
+            <div class="ad-info-right">
+              <div class="ad-group">
+                <label for="slime_name">이름</label>
+                <input type="text" id="slime_name" />
+              </div>
+              <div class="ad-group">
+                <label for="slime-price">가격</label>
+                <input type="text" id="slime-price" />
+              </div>
+
+              <div class="ad-group">
+                <label for="">오픈기간</label>
+                <input type="date" />
+                <p>~</p>
+                <input type="date" />
+              </div>
+
+              <div class="ad-group">
+                <label for="ad-slime-market">마켓이름</label>
+                <input type="text" id="ad-slime-market" />
+              </div>
+
+              <div class="ad-group">
+                <label for="ad-slime-link">링크</label>
+                <input type="text" id="ad-slime-link" />
+              </div>
+            </div>
+            <div class="ad-info-left">
+              <div class="ad-group">
+                <div class="ad-dis">
+                  <label for="slime-img-file">이미지</label>
+                  <input type="file" id="slime-img-file" />
+                </div>
+                <img id="ad-slime-preview" src="#" alt="미리보기" />
+              </div>
+              <div class="ad-group">
+                <input type="checkbox" name="" id="service" />
+                <label class="ad-t" for="service">서비스</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="ad-glues">
+            <span>풀 종류</span>
+            <table class="ad-glue-table">
+              <tr>
+                <td><input type="checkbox" name="glue[]" value="df" /> df</td>
+                <td><input type="checkbox" name="glue[]" value="fdf" /> fdf</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="glue[]" value="sdf" /> sdf</td>
+                <td><input type="checkbox" name="glue[]" value="abc" /> abc</td>
+              </tr>
+            </table>
+          </div>
+
+          <button class="slime-insert-btn" type="submit">등록하기</button>
+        </main>
+      </form>
+    </div>
+  </body>
 </html>

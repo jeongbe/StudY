@@ -1,0 +1,125 @@
+input[type="text"],
+input[type="date"] {
+    border: 1px solid #ccc;
+    height: 30px;
+}
+
+
+.ad-main-content {
+    display: block;
+    margin-top: 30px;
+    border: 1px solid #ece8e8;
+    border-radius: 0.6em;
+    /* height: 100vh; */
+    height: 890px;
+    width: 1850px;
+}
+
+.ad-title {
+    margin-left: 60px;
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.ad-inset-info {
+    display: flex;
+    font-size: 18px;
+}
+
+.ad-info-right {
+    margin-left: 10%;
+    margin-top: 40px;
+
+}
+
+.ad-info-left {
+    margin-left: 20%;
+    margin-top: 40px;
+}
+
+.ad-info-left>p {
+    margin-bottom: 15px;
+}
+
+.ad-group {
+    display: flex;
+    /* margin-left: 10%; */
+    margin-top: 20px;
+    align-items: center;
+}
+
+.ad-group>label {
+    margin-right: 15px;
+}
+
+.ad-group>p {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#ad-slime-link {
+    width: 300px;
+}
+
+#ad-slime-preview {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: #ece8e8;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    /* 일부 브라우저에서 적용 */
+    height: 20px;
+    /* 일부 브라우저에서 적용 */
+    transform: scale(0.9);
+    /* 크기 1.5배 확대 */
+    margin-right: 8px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+
+.ad-t {
+    margin-left: 15px;
+}
+
+.ad-dis {
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-glues {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.ad-glue-table {
+    border-collapse: collapse;
+    width: 150px;
+    margin-top: 25px;
+}
+
+.ad-glue-table th,
+.ad-glue-table td {
+    border: 1px solid #d1cdcd;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.slime-insert-btn {
+    display: flex;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 50px;
+    background-color: yellowgreen;
+    width: 120px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7em;
+    cursor: pointer;
+}

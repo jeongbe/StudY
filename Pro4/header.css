@@ -17,6 +17,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body{
+    height: 100%;
+}
+
 .card-body{
 padding-bottom: 10px;
 }
