@@ -1,0 +1,121 @@
+.ad-inquiries-content {
+
+    display: block;
+    margin-top: 30px;
+    border: 1px solid #ece8e8;
+    border-radius: 0.6em;
+    /* height: 100vh; */
+    height: 890px;
+    width: 1600px;
+    font-size: 18px;
+}
+
+.ad-inquiries-serch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.input-box {
+    position: relative;
+    display: inline-block;
+}
+
+.serch-box {
+    width: 400px;
+    height: 36px;
+    border-radius: 1em;
+    border: 1px solid #d1cdcd;
+    padding-left: 10px;
+    padding-right: 30px;
+    /* X 아이콘 들어갈 공간 확보 */
+    box-sizing: border-box;
+}
+
+.bi-x {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    fill: #999;
+    transition: fill 0.2s;
+}
+
+.bi-x:hover {
+    fill: #333;
+}
+
+.ad-serch-btn{
+    margin-left: 10px;
+    background-color: rgb(235, 180, 208);
+    width: 80px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0.6em;
+}
+
+.inquiries-h{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 50px;
+    
+}
+
+.inquiries-count{
+    margin-right: 100px;
+}
+
+.inquiries-table{
+    margin-top: 40px;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+    width: 1500px;
+    margin-left: 50px;
+  
+}
+
+.inquiries-table tr {
+    height: 35px;
+    cursor: pointer;
+}
+
+.inquiries-table th {
+    font-weight: normal;  /* 굵기 제거 */
+    /* text-align: left;     왼쪽 정렬 (선택) */
+    padding: 8px 12px;    /* 셀 간격 */
+    border-bottom: 1px solid rgb(235, 180, 208);
+    
+}
+
+
+.inquiries-table td {
+    border-bottom: 1px solid rgb(235, 180, 208);
+      color: #a39d9d;
+}
+
+.inquiries-table td:nth-child(1),
+.inquiries-table th:nth-child(1) {
+    text-align: center;
+    padding-left: 8px 12px;
+    width: 50px;
+}
+
+.inquiries-table td:nth-child(2),
+.inquiries-table th:nth-child(2) {
+
+
+    width: 1000px;
+}
+
+.inquiries-table td:nth-child(2){
+    text-align: left;
+    padding-left: 8px;
+}
+

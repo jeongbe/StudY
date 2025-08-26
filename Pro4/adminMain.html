@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/Pro4/header.css" rel="stylesheet" />
+    <link href="/Pro4/main.css" rel="stylesheet" />
+    <link href="/Pro4/adminSide.css" rel="stylesheet" />
+    <link href="/Pro4/adminSInsert.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="leftGroup">
+        <a class="logo" href="#"><img src="" alt="로고" /></a>
+        <nav class="mainMenu">
+          <a href="#">보기</a>
+          <a href="#">달력</a>
+          <a href="#">자유게시판</a>
+          <a href="#">공지사항</a>
+        </nav>
+      </div>
+      <div class="header_right">
+        <div class="join">회원가입</div>
+        <div class="login">로그인</div>
+      </div>
+    </header>
+
+    <!-- 사이드 + 메인 컨테이너 -->
+    <div class="content-container">
+      <!-- 왼쪽 사이드바 -->
+      <aside class="ad-side">
+        <div class="ad-side-body">
+          <a href="#">상품등록</a>
+        </div>
+        <div class="ad-side-body"><a href="/">좋아요</a></div>
+        <div class="ad-side-body"><a href="/">마켓 등록</a></div>
+        <div class="ad-side-body"><a href="/">일정 관리</a></div>
+        <div class="ad-side-body"><a href="/">문의내역</a></div>
+        <div class="ad-side-body"><a href="/">회원 리스트</a></div>
+      </aside>
+
+      <!-- 오른쪽 메인 컨텐츠 -->
+      <main class="ad-main-content">
+        <div class="ad-title">
+          <p>메인정보</p>
+          <hr class="ad-line" />
+        </div>
+        <form action="" method="get">
+          <div class="ad-inset-info">
+            <div class="ad-info-right">
+              <div class="ad-group">
+                <label for="total-visitors">총 방문자수</label>
+                <input type="text" id="total-visitors" readonly />
+              </div>
+              <div class="ad-group">
+                <label for="today-visitors">당일 방문자수</label>
+                <input type="text" id="today-visitors" readonly />
+              </div>
+
+              <div class="ad-group">
+                <label for="total-members">총 회원수</label>
+                <input type="text" id="total-members" readonly />
+              </div>
+
+              <div class="ad-group">
+                <label for="new-visitors">신규 방문자</label>
+                <input type="text" id="new-visitors" readonly />
+              </div>
+
+              <div class="ad-group">
+                <label for="returning-visitors">재방문자</label>
+                <input type="text" id="returning-visitors" />
+              </div>
+            </div>
+            <div class="ad-info-left">
+              <div class="ad-group">
+                <label for="total-posts">총게시물수</label>
+                <input type="text" id="total-posts" />
+              </div>
+
+              <div class="ad-group">
+                <label for="returning-visitors">신규 가입자 수</label>
+                <input type="text" id="returning-visitors" />
+              </div>
+
+              <div class="ad-group">
+                <label for="returning-visitors">신규 가입자 수</label>
+                <input type="text" id="returning-visitors" />
+              </div>
+
+              <div class="ad-group">
+                <label for="inactive-members">정지/탈퇴/휴면 회원 수</label>
+                <input type="text" id="inactive-members" />
+              </div>
+
+              <div class="ad-group">
+                <label for="error-page-count">오류페이지 수</label>
+                <input type="text" id="error-page-count" />
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <hr class="ad-line2" />
+
+        <div class="ad-sub-admin">
+          <span>서브 관리자</span>
+          <form action="" method="get">
+            <table class="ad-sub-admin-table">
+              <tr>
+                <td>dfff</td>
+                <td>박하늘</td>
+                <td>bsdf@naver.com</td>
+                <td>010-1234-5678</td>
+                <td>
+                  <input
+                    type="button"
+                    value="권환제거"
+                    id="remove-permission"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>닉네임</td>
+                <td>이름</td>
+                <td>이메일</td>
+                <td>연락처</td>
+                <td>
+                  <input
+                    type="button"
+                    value="권환제거"
+                    id="remove-permission"
+                  />
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

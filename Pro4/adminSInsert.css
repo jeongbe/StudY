@@ -1,0 +1,109 @@
+input[type="text"],
+input[type="date"] {
+    border: 1px solid #ccc;
+    height: 30px;
+}
+
+.ad-line {
+    width: 1450px;
+    margin-top: 15px;
+}
+
+.ad-line2 {
+    width: 1450px;
+    margin-top: 40px;
+    margin-left: 65px;
+}
+
+.ad-main-content {
+    display: block;
+    margin-top: 30px;
+    border: 1px solid #ece8e8;
+    border-radius: 0.6em;
+    /* height: 100vh; */
+    height: 890px;
+    width: 1800px;
+}
+
+.ad-title {
+    margin-left: 60px;
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.ad-inset-info {
+    display: flex;
+    font-size: 18px;
+}
+
+.ad-info-right {
+    margin-left: 10%;
+    margin-top: 40px;
+
+}
+
+.ad-info-left {
+    margin-left: 20%;
+    margin-top: 40px;
+}
+
+.ad-info-left>p {
+    margin-bottom: 15px;
+}
+
+.ad-group {
+    display: flex;
+    /* margin-left: 10%; */
+    margin-top: 20px;
+    align-items: center;
+}
+
+.ad-group>label {
+    margin-right: 15px;
+}
+
+.ad-group>p {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.ad-sub-admin {
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+.ad-sub-admin>span {
+    font-size: 20px;
+    /* font-weight: 500; */
+}
+
+.ad-sub-admin-table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+    width: 1500px;
+
+}
+
+/* 첫 번째 tr의 td에만 위쪽 선 추가 */
+.ad-sub-admin-table tr:first-child td {
+    border-top: 2px solid #888;
+}
+
+.ad-sub-admin-table td {
+    border-bottom: 1px solid #d1cdcd;
+    width: 150px;
+    height: 40px;
+}
+
+#remove-permission{
+
+    background-color: green;
+    color: white;
+    width: 90px;
+    height: 30px;
+    border-radius: 0.6em;
+    cursor: pointer;
+}
