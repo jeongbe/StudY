@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/Pro4/header.css" rel="stylesheet" />
+    <link href="/Pro4/main.css" rel="stylesheet" />
+    <link href="/Pro4/adminSide.css" rel="stylesheet" />
+    <link href="/Pro4/adUserList.css" rel="stylesheet" />
+    <title>유저 리스트</title>
+  </head>
+  <body>
+    <header>
+      <div class="leftGroup">
+        <a class="logo" href="#"><img src="" alt="로고" /></a>
+        <nav class="mainMenu">
+          <a href="#">보기</a>
+          <a href="#">달력</a>
+          <a href="#">자유게시판</a>
+          <a href="#">공지사항</a>
+        </nav>
+      </div>
+      <div class="header_right">
+        <div class="join">회원가입</div>
+        <div class="login">로그인</div>
+      </div>
+    </header>
+
+    <!-- 사이드 + 메인 컨테이너 -->
+    <div class="content-container">
+      <!-- 왼쪽 사이드바 -->
+      <aside class="ad-side">
+        <div class="ad-side-body">
+          <a href="#">상품등록</a>
+        </div>
+        <div class="ad-side-body"><a href="/">좋아요</a></div>
+        <div class="ad-side-body"><a href="/">마켓 등록</a></div>
+        <div class="ad-side-body"><a href="/">일정 관리</a></div>
+        <div class="ad-side-body"><a href="/">문의내역</a></div>
+        <div class="ad-side-body"><a href="/">회원 리스트</a></div>
+      </aside>
+
+      <!-- 오른쪽 메인 컨텐츠 -->
+      <main class="ad-inquiries-content">
+        <div class="ad-inquiries-serch">
+          <form action="" method="get" class="input-x-wrap">
+            <div class="input-box">
+              <input
+                type="text"
+                class="serch-box"
+                placeholder="검색어를 입력하세요"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </div>
+            <button class="ad-serch-btn" type="button">검색</button>
+          </form>
+        </div>
+
+        <div class="inquiries-h">
+          <div class="inquiries-type">
+            <span>전체</span>
+            <span> | </span>
+            <span>회원</span>
+            <span> | </span>
+            <span>정지</span>
+            <span> | </span>
+            <span>탈퇴</span>
+          </div>
+          <div class="inquiries-count">
+            <span>n 개</span>
+          </div>
+        </div>
+
+        <form action="" method="get">
+          <table class="inquiries-table">
+            <thead>
+              <tr>
+                <th>순번</th>
+                <th>닉네임</th>
+                <th>아이디</th>
+                <th>연락처</th>
+                <th>계정상태</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>dfsdf</td>
+                <td>dddbnfsfd</td>
+                <td>010-1549-4542</td>
+                <td>활동</td>
+                <td></td>
+                <td>
+                  <button class="user-stop" type="button">정지</button>
+                </td>
+                <td>
+                  <button class="user-delete-account" type="button">탈퇴</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>fff</td>
+                <td>sdfbnnn</td>
+                <td>010-6524-5644</td>
+                <td>정지</td>
+                <td></td>
+                <td>
+                  <button class="user-stop" type="button">정지</button>
+                </td>
+                <td>
+                  <button class="user-delete-account" type="button">탈퇴</button>
+                </td>
+              </tr>
+              <!-- 추가 문의 내역 -->
+            </tbody>
+          </table>
+        </form>
+
+        <!-- 페이징 추가 -->
+      </main>
+    </div>
+  </body>
+</html>
