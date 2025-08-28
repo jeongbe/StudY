@@ -1,0 +1,79 @@
+/* 전체 컨테이너 */
+.ad-user-info-container {
+    width: 1000px;
+    height: 390px;
+    border: 3px solid rgb(180, 210, 235);
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 제목 부분 */
+.u-i-title {
+    margin-bottom: 10px;
+}
+
+.u-i-title span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.u-i-line {
+    margin-left: 5px;
+    width: 950px;
+    border: 2px solid rgb(180, 210, 235);
+}
+
+/* 컨텐츠 영역을 Flex로 묶음 */
+.u-i-content {
+    display: -webkit-inline-box;
+    gap: 50px;
+
+}
+
+.u-i-account-items {
+    margin-top: 10px;
+}
+
+/* 각 아이템(라벨 + 인풋) 컨테이너 */
+.u-i-account-item {
+    display: flex;
+    align-items: left;
+    gap: 12px;
+    /* 라벨과 인풋 사이 간격 */
+}
+
+/* 라벨 스타일 */
+.u-i-ItmNam {
+    display: flex;
+    width: 130px;
+    text-align: right;
+    /* padding-right: 10px; */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 인풋 스타일 */
+.u-i-account-item input {
+    width: 100px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    /* background-color: #f8f8f8; */
+    /* color: #555; */
+}
+
+.info-title{
+    font-size: 18px;
+}
+/* /* 읽기 전용 input 스타일 
+.u-i-account-item input[readonly],
+.u-i-account-item input[disabled] {
+    background-color: #f1f1f1;
+    color: #777;
+    cursor: not-allowed;
+}
+ */

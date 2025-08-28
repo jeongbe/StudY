@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="adUserInfoPop.css" />
+    <title>회원 부가정보</title>
+</head>
+
+<body>
+    <div class="ad-user-info-container">
+        <div class="u-i-title">
+            <span>회원 부가정보</span>
+            <hr class="u-i-line" />
+        </div>
+        <form action="" method="get">
+            <div class="u-i-content">
+                <div class="account-info">
+                    <div class="u-i-title-box">
+                        <span class="info-title">• 계정 상태 정보</span>
+                    </div>
+                    <div class="u-i-account-items">
+                        <div class="u-i-account-item">
+                            <label for="user-permission" class="u-i-ItmNam">유저권환</label>
+                            <input type="text" name="" id="user-permission" disabled value="sd" />
+                        </div>
+                        <div class="u-i-account-item">
+                            <label for="account-create-date" class="u-i-ItmNam">계정 최초 생성일</label>
+                            <input type="text" name="" id="account-create-date" readonly />
+                        </div>
+                        <div class="u-i-account-item">
+                            <label for="" class="u-i-ItmNam">계정상태</label>
+                            <input type="text" name="" id="account-status" readonly />
+                        </div>
+                        <div class="u-i-account-item">
+                            <label for="account-status-change-date" class="u-i-ItmNam">계정상태 변경일</label>
+                            <input type="text" name="" id="account-status-change-date" readonly />
+                        </div>
+                        <div class="u-i-account-item">
+                            <label for="withdrawal-date" class="u-i-ItmNam">탈퇴일</label>
+                            <input type="text" name="" id="withdrawal-date" readonly />
+                        </div>
+                        <div class="u-i-account-item">
+                            <label for="dormant-conversion-date" class="u-i-ItmNam">휴면전환일</label>
+                            <input type="text" name="" id="dormant-conversion-date" readonly />
+                        </div>
+                        <div class="u-i-account-item">
+                            <label for="login-fail-count" class="u-i-ItmNam">로그인 실패 횟수</label>
+                            <input type="text" name="" id="login-fail-count" readonly />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="access-info">
+                    <div class="u-i-title-box">
+                        <span class="info-title"> • 접속 및 활동 정보</span>
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="" class="u-i-ItmNam">최근접속일</label>
+                        <input type="text" name="" id="recent-access-date" readonly />
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="" class="u-i-ItmNam">누적접속일수</label>
+                        <input type="text" name="" id="accumulated-access-days" readonly />
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="" class="u-i-ItmNam">마지막 IP</label>
+                        <input type="text" name="" id="last-ip" readonly />
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="" class="u-i-ItmNam">마지막 로그인 환경</label>
+                        <input type="text" name="" id="last-login-environment" readonly />
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="" class="u-i-ItmNam">비밀번호 변경일</label>
+                        <input type=" text" name="" id="password-change-date" readonly />
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="" class="u-i-ItmNam">비밀번호변경 횟수</label>
+                        <input type="text" name="" id="password-change-count" readonly />
+                    </div>
+                    <!-- <span class="u-i-ItmNam">비밀번호 만료일?</span> -->
+                </div>
+
+                <div class="activity-info">
+                    <div class="u-i-title-box">
+                        <span class="info-title">• 활동 관련 정보</span>
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="accumulated-post-count" class="u-i-ItmNam">누적게시글수</label>
+                        <input type="text" name="" id="accumulated-post-count" readonly />
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="accumulated-comment-count" class="u-i-ItmNam">누적댓글수</label>
+                        <input type="text" name="" id="accumulated-comment-count" readonly />
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="like-count" class="u-i-ItmNam">좋아요수</label>
+                        <input type="text" name="" id="like-count" readonly />
+                    </div>
+                    <div class="u-i-account-item">
+                        <label for="report-count" class="u-i-ItmNam">신고횟수</label>
+                        <input type="text" name="" id="report-count" readonly />
+                    </div>
+                </div>
+
+                <!-- <span class="u-i-ItmNam">계정장금여부</span> -->
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

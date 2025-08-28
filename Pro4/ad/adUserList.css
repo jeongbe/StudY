@@ -140,9 +140,9 @@
 
 
 
-/* 
-.inquiries-table td:nth-child(2){
-    text-align: left;
-    padding-left: 8px;
+
+.inquiries-table td:nth-child(3){
+    text-decoration: underline;
+    cursor: pointer;
 }
- */
+

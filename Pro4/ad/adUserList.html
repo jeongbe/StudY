@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/Pro4/header.css" rel="stylesheet" />
     <link href="/Pro4/main.css" rel="stylesheet" />
-    <link href="/Pro4/adminSide.css" rel="stylesheet" />
-    <link href="/Pro4/adUserList.css" rel="stylesheet" />
+    <link href="/Pro4/ad/adminSide.css" rel="stylesheet" />
+    <link href="/Pro4/ad/adUserList.css" rel="stylesheet" />
     <title>유저 리스트</title>
   </head>
   <body>
@@ -87,7 +87,7 @@
             <thead>
               <tr>
                 <th>순번</th>
-                <th>닉네임</th>
+                <th >닉네임</th>
                 <th>아이디</th>
                 <th>연락처</th>
                 <th>계정상태</th>
@@ -100,12 +100,12 @@
               <tr>
                 <td>1</td>
                 <td>dfsdf</td>
-                <td>dddbnfsfd</td>
+                <td onclick="UserInfo()">dddbnfsfd</td>
                 <td>010-1549-4542</td>
                 <td>활동</td>
                 <td></td>
                 <td>
-                  <button class="user-stop" type="button">정지</button>
+                  <button class="user-stop" type="button" onclick="UserStopPopup()">정지</button>
                 </td>
                 <td>
                   <button class="user-delete-account" type="button">탈퇴</button>
@@ -114,12 +114,12 @@
               <tr>
                 <td>2</td>
                 <td>fff</td>
-                <td>sdfbnnn</td>
+                <td onclick="UserInfo()">sdfbnnn</td>
                 <td>010-6524-5644</td>
                 <td>정지</td>
                 <td></td>
                 <td>
-                  <button class="user-stop" type="button">정지</button>
+                  <button class="user-stop" type="button" onclick="UserStopPopup()">정지</button>
                 </td>
                 <td>
                   <button class="user-delete-account" type="button">탈퇴</button>
@@ -133,5 +133,6 @@
         <!-- 페이징 추가 -->
       </main>
     </div>
+    <script src="adUserList.js"></script>
   </body>
 </html>
