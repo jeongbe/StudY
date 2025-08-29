@@ -1,0 +1,203 @@
+.ad-mg-content {
+
+    display: flex;
+    margin-top: 30px;
+    border: 1px solid #ece8e8;
+    border-radius: 0.6em;
+    /* height: 100vh; */
+    height: 890px;
+    width: 1600px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.market-list-contents {
+    width: 600px;
+    height: 700px;
+    border: 1px solid #ece8e8;
+    border-radius: 0.6em;
+}
+
+.market-list,
+.glue-list {
+    /* background-color: lightpink; */
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+
+}
+
+.market-list-tit,
+.glue-list-tit {
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 50px;
+}
+
+.market-list-tit span,
+.glue-list-tit span {
+    font-size: 22px;
+}
+
+.bi-plus-circle {
+    margin-top: 10px;
+    margin-right: 5px;
+    color: rgb(190, 204, 204);
+}
+
+.market-add,
+.glue-add {
+    display: flex;
+    height: 50px;
+    cursor: pointer;
+}
+
+.market-add span {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(190, 204, 204);
+}
+
+.glue-add span {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(204, 190, 202);
+}
+
+.bi-plus-circle2 {
+    margin-top: 10px;
+    margin-right: 5px;
+    color: rgb(204, 190, 202);
+}
+
+.markets,
+.glues {
+    margin-top: 10px;
+    display: flex;
+    height: 621px;
+    /* 핵심 부분 */
+    overflow-y: auto;
+    /* 세로 스크롤만 생기게 */
+    overflow-x: hidden;
+    /* 가로 스크롤 제거 */
+
+    /* 스크롤 디자인 */
+    scrollbar-width: thin;
+    /* 파이어폭스 */
+    scrollbar-color: #999 transparent;
+
+}
+
+.market-box {
+    display: flex;
+    margin-left: 10px;
+    width: 250px;
+    height: 40px;
+    background-color: rgb(186, 221, 233);
+    align-items: center;
+    border-radius: 0.9em;
+    margin-bottom: 10px;
+}
+
+.glue-box {
+    display: flex;
+    margin-left: 10px;
+    width: 250px;
+    height: 40px;
+    border: solid 1px lightgray;
+    align-items: center;
+    border-radius: 0.9em;
+    margin-bottom: 10px;
+}
+
+.market-box-img {
+    margin-left: 10px;
+    background-color: gainsboro;
+    width: 28px;
+    /* 원하는 크기 */
+    height: 28px;
+    border-radius: 50%;
+    /* 핵심! 원형으로 만들기 */
+    object-fit: cover;
+    /* 이미지 비율 유지하면서 꽉 채움 */
+    order: 2px solid #ccc;
+    /* 원 테두리 (선택사항) */
+}
+
+.market-name {
+    margin-left: 10px;
+}
+
+.glue-name {
+    margin-left: 10px;
+}
+
+.markets-li1,
+.glues-li1 {
+    width: 50%;
+
+}
+
+.market-box svg {
+    margin-left: auto;
+    /* 핵심: 맨 오른쪽으로 밀기 */
+    padding-right: 20px;
+    /* 오른쪽 여백 추가 */
+
+}
+
+.bi-circle-fill2 {
+    /* 테스트 */
+    color: red;
+}
+
+.bi-circle-fill {
+    /* 테스트 */
+    color: green;
+}
+
+.glue-box button {
+    margin-left: auto;
+    /* 핵심: 맨 오른쪽으로 밀기 */
+    margin-right: 15px;
+    /* background-color: lightpink; */
+    border: 1px solid lightpink;
+    color: lightpink;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     cursor: pointer;
+     border-radius: 0.2em;
+    /* 오른쪽 여백 추가 
+
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: gray; */
+
+}
+
+/* {
+    /* background-color: lightskyblue; 
+    width: 600px;
+    height: 700px;
+    border: 1px solid #ece8e8;
+    display: flex;
+    justify-content: space-between;
+} */
+
+/* .ad-mg-line {
+    width: 2px;
+    height: 100px;
+    background-color: #afaaaa;
+} */
