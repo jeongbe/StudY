@@ -35,6 +35,7 @@
 }
 
 .form-group {
+
     margin-bottom: 20px;
     display: block;
     /* /isplay: flex; */
@@ -46,13 +47,6 @@
     margin-bottom: 5px;
 }
 
-/* .form-group input{
-    width: 100%;
-    height: 40px;
-    padding-right: 35px;
-
-} */
-
 .form-group input {
     border: 1px solid #ccc;
     border-radius: 0.4em;
@@ -61,41 +55,24 @@
     padding-left: 5px;
 }
 
-/* .input-email {
-    border: 1px solid #ccc;
-    border-radius: 0.4em;
-    width: 270px;
-    height: 40px;
-    padding-left: 5px;
-} */
-
-
-/* .form-email {
-    display: flex;
-} */
-
-/* .form-pasw,
-.form-chk-pasw {
-    position: relative;
-    /* 아이콘 위치 제어 
-    width: 360px;
-    /* input width와 동일하게 맞춤 
-} */
-
-
 
 .join-submit-button {
-    position: absolute;
-    bottom: 20px; /* 하단 여백 */
-    left: 20px;
+    /* position: absolute; */
+    /* 
+    bottom: 20px; */
+    /* 하단 여백 */
+    /* left: 20px; */
     width: 360px;
     height: 40px;
-}
-.login-box {
-    position: relative; /* absolute 기준 */
+    margin-top: 40px;
 }
 
-.join-submit-button button{
+.login-box {
+    position: relative;
+    /* absolute 기준 */
+}
+
+.join-submit-button button {
     border-radius: 0.4em;
     background-color: rgb(165, 221, 132);
     display: flex;
@@ -103,4 +80,52 @@
     height: 40px;
     justify-content: center;
     align-items: center;
+}
+
+.login-line {
+    margin-left: -20px;
+    margin-bottom: auto;
+}
+
+.find-form {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #f3f3d8; */
+    margin-left: -20px;
+    height: 47px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left-box {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.left-box a {
+    margin-right: 10px;
+
+}
+
+.right-box a {
+    display: flex;
+    /* background-color: #b85a5a; */
+    border: 3px solid rgb(165, 221, 132);
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 30px;
+}
+
+
+.left-box a,
+.right-box a {
+    color: #888;
+    text-decoration: none;
+}
+
+.right-box {
+    margin-top: 10px;
+    margin-right: 10px;
 }
