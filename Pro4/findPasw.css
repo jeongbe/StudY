@@ -1,0 +1,91 @@
+.find-pasw-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* 브라우저 전체 높이 */
+    display: flex;
+    justify-content: center;
+    /* 가로 중앙 */
+    align-items: center;
+    /* 세로 중앙 */
+    background-color: #f5f5f5;
+    /* 선택사항: 배경색 */
+
+
+}
+
+.find-pasw-box {
+    width: 410px;
+    height: 350px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.find-pasw-title{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.find-pasw-form{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.form-group {
+
+    margin-bottom: 20px;
+    display: block;
+    /* /isplay: flex; */
+}
+
+.form-group label {
+    font-size: 17px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    border: 1px solid #ccc;
+    border-radius: 0.4em;
+    width: 360px;
+    height: 40px;
+    padding-left: 5px;
+}
+
+
+.find-psaw-sBtn {
+    position: absolute;
+    width: 360px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.login-box {
+    position: relative;
+}
+
+.find-psaw-sBtn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    width: 360px;
+    height: 40px;
+    background-color: rgb(165, 221, 132);
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+
+.find-form {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #f3f3d8; */
+    margin-left: -20px;
+    height: 47px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+

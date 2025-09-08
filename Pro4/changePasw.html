@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link href="/Pro4/header.css" rel="stylesheet" />
+  <link href="/Pro4/changePasw.css" rel="stylesheet" />
+  <link href="/Pro4/footer.css" rel="stylesheet" />
+  <title>비밀번호 재설정</title>
+</head>
+
+<body>
+  <header>
+    <div class="leftGroup">
+      <a class="logo" href="#"><img src="" alt="로고" /></a>
+
+      <nav class="mainMenu">
+        <a href="#">보기</a>
+        <a href="#">달력</a>
+        <a href="#">자유게시판</a>
+        <a href="#">공지사항</a>
+      </nav>
+    </div>
+    <div class="header_right">
+      <div class="join">회원가입</div>
+      <div class="login">로그인</div>
+    </div>
+  </header>
+
+  <!-- 사이드 + 메인 컨테이너 -->
+  <div class="change-pasw-container">
+    <div class="change-pasw-box">
+      <div class="change-pasw-title">
+        <span>비밀번호 재설정</span>
+      </div>
+      <div class="change-pasw-form">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="nickName">새 비밀번호</label>
+            <div class="newPasw">
+              <input type="text" id="newPasw" name="newPasw" class="input-nickN" placeholder="" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">새 비밀번호 확인</label>
+            <div class="newPaswChk">
+              <input type="email" id="newPaswChk" name="newPaswChk" class="input-email" placeholder="" required />
+            </div>
+          </div>
+
+          <div class="change-psaw-sBtn">
+            <button type="submit" class="">비밀번호 변경하기</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer xmlns:th="http://www.thymeleaf.org" th:fragment="mainFooter" class="site-footer">
+    <div class="footer-inner">
+      <div class="f-top">
+        <div class="footer-logo">
+          <img src="" alt="로고" />
+        </div>
+      </div>
+      <hr class="line" />
+      <div class="f-bottem">
+        <nav class="footer-links">
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+          <span>문의:</span>
+        </nav>
+        <p>© 2025 MyWebsite. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
